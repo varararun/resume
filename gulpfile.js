@@ -34,7 +34,7 @@ gulp.task('scss', function() {
 
 gulp.task('jshint', function() {
     return gulp.src([
-            'assets/js/avarghese.js',
+            'assets/js/resume.js',
             '*.js'
         ])
         .pipe(jshint())
@@ -44,8 +44,8 @@ gulp.task('jshint', function() {
 
 gulp.task('format', function() {
     return gulp.src([
-            'assets/css/avarghese.css',
-            'client/js/avarghesejs',
+            'assets/css/resume.css',
+            'client/js/resume.js',
             'index.html',
             '*.{js,json}'
         ], {
@@ -57,7 +57,7 @@ gulp.task('format', function() {
 
 gulp.task('minify-css', ['scss'], function() {
     return gulp.src([
-        'assets/css/avarghese.css'
+        'assets/css/resume.css'
         ])
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
@@ -66,7 +66,7 @@ gulp.task('minify-css', ['scss'], function() {
 
 gulp.task('minify-js', function() {
     return gulp.src([
-        'assets/js/avarghese.js'
+        'assets/js/resume.js'
         ])
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
@@ -84,12 +84,12 @@ gulp.task('browserSync', function() {
 
 gulp.task('serve', ['browserSync', 'scss', 'minify-css', 'minify-js'], function() {
     gulp.watch('assets/css/**/*.scss', ['scss']);
-    gulp.watch('assets/css/avarghese.css', ['minify-css']);
-    gulp.watch('assets/js/avarghese.js', ['minify-js']);
+    gulp.watch('assets/css/resume.css', ['minify-css']);
+    gulp.watch('assets/js/resume.js', ['minify-js']);
     gulp.watch('index.html', browserSync.reload);
     gulp.watch([
-        'assets/js/avarghese.min.js',
-        'assets/css/avarghese.min.css'
+        'assets/js/resume.min.js',
+        'assets/css/resume.min.css'
         ], browserSync.reload);
 });
 
