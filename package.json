@@ -1,0 +1,44 @@
+{
+  "name": "avarghese.resume",
+  "title": "Online Resume",
+  "version": "1.0.0",
+  "description": "My Online Resume",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arvarghese/resume.git"
+  },
+  "author": "arun varghese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvarghese/resume/issues"
+  },
+  "homepage": "https://github.com/arvarghese/resume",
+  "dependencies": {
+    "bower": "1.8.0",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.2",
+    "clean-css": "3.4.21",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-clean-css": "2.0.13",
+    "gulp-header": "1.8.8",
+    "gulp-jsbeautifier": "2.0.3",
+    "gulp-jshint": "2.0.4",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.2",
+    "gulp-uglify": "2.0.0",
+    "jshint": "2.9.4",
+    "jshint-stylish": "2.2.1",
+    "lite-server": "2.2.2",
+    "nodemon": "1.11.0",
+    "sass": "0.5.0",
+    "uglify": "0.1.5"
+  }
+}
