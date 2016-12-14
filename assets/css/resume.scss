@@ -260,6 +260,14 @@ h2, .header-name, .nav-close, .nav-menu>ul>li:nth-child(even) {
   color: #089ee5 !important;
 }
 
+.achievements {
+  h4 {
+    a {
+      font-weight: 200;
+      color: #089ee5 !important;
+    }
+  }
+}
 @media handheld,
 (max-width: 640px),
 (max-height: 400px) {

@@ -263,6 +263,10 @@ h2, .header-name, .nav-close, .nav-menu > ul > li:nth-child(even) {
 .details-icon {
   color: #089ee5 !important; }
 
+.achievements h4 a {
+  font-weight: 200;
+  color: #089ee5 !important; }
+
 @media handheld, (max-width: 640px), (max-height: 400px) {
   .nav-menu > ul > li > a {
     font-size: 2em !important; } }
