@@ -79,6 +79,7 @@ gulp.task('browserSync', function() {
         server: {
             baseDir: ''
         },
+        port: process.env.PORT || 4790
     });
 });
 
