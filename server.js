@@ -1,18 +1,17 @@
-'use strict';
+"use strict";
 
-const express = require('express');
-const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 4790;
-const IP = process.env.IP || "http://localhost";
-
+var express = require("express");
+var path = require("path");
+var app = express();
 
 app.use(express.static(path.join(__dirname)));
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.listen(PORT);
-console.log(`view app at ${IP}:${PORT}`);
+var port = 4790;
+app.listen(port);
+console.log(`view app at http://localhost:${port}`);
 
 exports = module.exports = app;
