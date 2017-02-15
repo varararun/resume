@@ -77,6 +77,7 @@ h6 {
 .experience > span:after,
 .environment > span:after,
 .projects > span:after,
+.opensource > span:after,
 .skills > ul > li > span:after,
 .work-details > span:nth-child(odd):after {
   content: " || ";
@@ -85,6 +86,7 @@ h6 {
 .experience > span:last-child:after,
 .environment > span:last-child:after,
 .projects > span:last-child:after,
+.opensource > span:last-child:after,
 .skills > ul > li > span:last-child:after {
   content: ''; }
 
@@ -93,13 +95,15 @@ ul > li {
 
 .experience > div > .details > ul > li,
 .highlights > ul > li,
-.projects > ul > li {
+.projects > ul > li,
+.opensource > ul > li {
   background: rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid white; }
 
 .experience > div > .details > ul > li:hover,
 .highlights > ul > li:hover,
-.projects > ul > li:hover {
+.projects > ul > li:hover,
+.opensource > ul > li:hover {
   background: transparent; }
 
 .nav-btn {
