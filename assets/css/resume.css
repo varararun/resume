@@ -311,4 +311,6 @@ h2,
 
 @media handheld, (max-width: 640px), (max-height: 400px) {
   .nav-menu > ul > li > a {
-    font-size: 2em !important; } }
+    font-size: 2em !important; }
+  section > h2 {
+    text-align: center; } }
