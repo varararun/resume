@@ -2,6 +2,7 @@ var _this = this;
 var Resume = {
     initialize: function () {
         Resume.loadEvents();
+        Resume.loadKeyboardEvents();
     },
     loadEvents: function () {
         $('.nav-btn').click(function () {
@@ -30,6 +31,35 @@ var Resume = {
                 $('.scrolltop-btn').addClass('scrolltop-btn-hidden');
             }
         });
+    },
+    loadKeyboardEvents: function () {
+        document.onkeydown = function (e) {
+            switch (e.keyCode) {
+                case 37:
+                    if ($("nav").hasClass("nav-open")) {
+                        $(".nav-btn").click();
+                    }
+                    break;
+                case 39:
+                    if (!$("nav").hasClass("nav-open")) {
+                        $(".nav-btn").click();
+                    }
+                    break;
+                case 27:
+                    if ($("nav").hasClass("nav-open")) {
+                        $(".nav-btn").click();
+                    }
+                    break;
+                case 8:
+                    if ($("nav").hasClass("nav-open")) {
+                        $(".nav-btn").click();
+                    }
+                    break;
+                case 32:
+                    $(".nav-btn").click();
+                    break;
+            }
+        };
     }
 };
 Resume.initialize();
