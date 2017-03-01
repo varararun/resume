@@ -179,14 +179,40 @@ ul > li {
     .nav .nav-menu ul {
       padding: 2em 0 !important;
       width: 100%; }
-      .nav .nav-menu ul li a {
-        font-size: 10vmin;
-        font-weight: 200; }
-      .nav .nav-menu ul li:hover {
-        -webkit-transform: translateX(1em);
-                transform: translateX(1em);
-        opacity: .7;
-        background: rgba(0, 0, 0, 0.1); }
+      .nav .nav-menu ul li {
+        -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0); }
+        .nav .nav-menu ul li a {
+          font-size: 10vmin;
+          font-weight: 200; }
+        .nav .nav-menu ul li:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.1);
+          -webkit-transform: scaleX(0);
+                  transform: scaleX(0);
+          -webkit-transform-origin: 0 50%;
+                  transform-origin: 0 50%;
+          -webkit-transition-property: -webkit-transform;
+          transition-property: -webkit-transform;
+          transition-property: transform;
+          transition-property: transform, -webkit-transform;
+          -webkit-transition-duration: 0.5s;
+                  transition-duration: 0.5s;
+          -webkit-transition-timing-function: ease-out;
+                  transition-timing-function: ease-out; }
+        .nav .nav-menu ul li:hover {
+          -webkit-transform: translateX(1em);
+                  transform: translateX(1em);
+          opacity: .7; }
+        .nav .nav-menu ul li:hover:before {
+          -webkit-transform: scaleX(1);
+                  transform: scaleX(1); }
 
 .nav-text-right {
   margin-right: -2em;

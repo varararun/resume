@@ -186,14 +186,32 @@ ul>li {
             padding: 2em 0!important;
             width: 100%;
             li {
+                transform: perspective(1px) translateZ(0);
                 a {
                     font-size: 10vmin;
                     font-weight: 200;
                 }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, .1);
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    transition-property: transform;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-out;
+                }
                 &:hover {
                     transform: translateX(1em);
                     opacity: .7;
-                    background: rgba(0, 0, 0, .1);
+                }
+                &:hover:before {
+                    transform: scaleX(1);
                 }
             }
         }
