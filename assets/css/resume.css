@@ -1,7 +1,8 @@
 html,
 body {
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 100; }
+  font-weight: 100;
+  font-size: 1em; }
 
 i,
 a,
@@ -68,7 +69,7 @@ h6 {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+          filter: grayscale(100%); }
 
 .experience > span:after,
 .environment > span:after,
@@ -121,18 +122,18 @@ ul > li {
 
 .nav-close > .nav-icon > .first {
   -webkit-transform: rotate(-45deg) translate(0, 0em);
-  transform: rotate(-45deg) translate(0, 0em);
+          transform: rotate(-45deg) translate(0, 0em);
   -webkit-transform-origin: right;
-  transform-origin: right; }
+          transform-origin: right; }
 
 .nav-close > .nav-icon > .second {
   opacity: 0; }
 
 .nav-close > .nav-icon > .third {
   -webkit-transform: rotate(45deg) translate(-0.3em, -1.1em);
-  transform: rotate(45deg) translate(-0.3em, -1.1em);
+          transform: rotate(45deg) translate(-0.3em, -1.1em);
   -webkit-transform-origin: left;
-  transform-origin: left; }
+          transform-origin: left; }
 
 .page-wrap {
   width: 100%;
@@ -142,12 +143,12 @@ ul > li {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   -webkit-transform: translate(0);
-  transform: translate(0);
+          transform: translate(0);
   z-index: -1; }
 
 .page-wrap-disable {
   -webkit-filter: blur(0.1em);
-  filter: blur(0.1em); }
+          filter: blur(0.1em); }
 
 .nav {
   opacity: 0;
@@ -167,7 +168,7 @@ ul > li {
   z-index: 5; }
 
 .nav-menu > ul > li > a {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 200; }
 
 .nav-menu > ul {
@@ -175,7 +176,7 @@ ul > li {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 2em 0 !important;
   text-align: center;
   width: 90%;
@@ -192,24 +193,22 @@ h2,
 .nav-menu > ul > li:nth-child(even) {
   color: #089ee5 !important; }
 
-.skills > ul > li > h4 {
-  font-weight: 400; }
-
 .nav-menu > ul > li:hover {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2); }
+          transform: scale(1.2); }
 
 .profile:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-filter: grayscale(0);
-  filter: grayscale(0); }
+          filter: grayscale(0); }
 
-.info > ul > li > a:hover {
-  padding: .5em; }
-
-.info > ul {
+.info ul {
   font-size: 1.3em; }
+  .info ul li > a {
+    padding-right: 1em; }
+    .info ul li > a:hover {
+      padding: .5em; }
 
 .work-details {
   font-size: 1em;
@@ -242,7 +241,7 @@ h2,
 .dl-resume-header:hover,
 .dl-resume-footer:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
+          transform: scale(1.1); }
 
 .scrolltop-btn {
   color: #089ee5 !important;
@@ -264,18 +263,18 @@ h2,
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-line-pack: stretch;
-  align-content: stretch; }
+      align-content: stretch; }
 
 .tech-icons-list > img {
   width: auto;
@@ -284,13 +283,13 @@ h2,
   transition: .5s ease-in-out;
   margin: 1em;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+          filter: grayscale(100%); }
 
 .tech-icons-list > img:hover {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+          filter: grayscale(0);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out; }
 
@@ -305,8 +304,11 @@ h2,
   font-weight: 200;
   color: #089ee5 !important; }
 
+.experience .job .details .summary {
+  text-align: center; }
+
 @media handheld, (max-width: 640px), (max-height: 400px) {
   .nav-menu > ul > li > a {
-    font-size: 2em !important; }
+    font-size: 1.5em !important; }
   section > h2 {
     text-align: center; } }
