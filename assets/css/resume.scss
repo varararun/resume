@@ -18,7 +18,7 @@ sans-serif;
         }
         &:before {
             content: $bullet;
-            line-height: 1.8em;
+            line-height: 3.2em;
             position: absolute;
             z-index: -1;
             top: 0;
@@ -34,6 +34,7 @@ sans-serif;
         }
         &:hover {
             transform: translateX(1em) scale(1.01);
+            padding: 1em 0.5em !important;
             transform-origin: left;
             opacity: .7;
             background-color: $highlight-color !important;
@@ -69,8 +70,8 @@ a {
 ul,
 li {
     list-style-type: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin-left: 0;
+    padding-left: 0;
     transition: .3s;
 }
 

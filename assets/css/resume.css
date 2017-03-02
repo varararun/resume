@@ -19,8 +19,8 @@ a {
 ul,
 li {
   list-style-type: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin-left: 0;
+  padding-left: 0;
   -webkit-transition: .3s;
   transition: .3s; }
 
@@ -145,7 +145,7 @@ h2,
             padding: .5em; }
         .nav .nav-menu ul li:before {
           content: "";
-          line-height: 1.8em;
+          line-height: 3.2em;
           position: absolute;
           z-index: -1;
           top: 0;
@@ -168,6 +168,7 @@ h2,
         .nav .nav-menu ul li:hover {
           -webkit-transform: translateX(1em) scale(1.01);
                   transform: translateX(1em) scale(1.01);
+          padding: 1em 0.5em !important;
           -webkit-transform-origin: left;
                   transform-origin: left;
           opacity: .7;
@@ -286,7 +287,7 @@ h2,
         padding: .5em; }
     .info ul li:before {
       content: " > ";
-      line-height: 1.8em;
+      line-height: 3.2em;
       position: absolute;
       z-index: -1;
       top: 0;
@@ -309,6 +310,7 @@ h2,
     .info ul li:hover {
       -webkit-transform: translateX(1em) scale(1.01);
               transform: translateX(1em) scale(1.01);
+      padding: 1em 0.5em !important;
       -webkit-transform-origin: left;
               transform-origin: left;
       opacity: .7;
@@ -331,7 +333,7 @@ h2,
       padding: .5em; }
   .highlights ul li:before {
     content: " > ";
-    line-height: 1.8em;
+    line-height: 3.2em;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -354,6 +356,7 @@ h2,
   .highlights ul li:hover {
     -webkit-transform: translateX(1em) scale(1.01);
             transform: translateX(1em) scale(1.01);
+    padding: 1em 0.5em !important;
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
@@ -376,7 +379,7 @@ h2,
       padding: .5em; }
   .skills ul li:before {
     content: " > ";
-    line-height: 1.8em;
+    line-height: 3.2em;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -399,6 +402,7 @@ h2,
   .skills ul li:hover {
     -webkit-transform: translateX(1em) scale(1.01);
             transform: translateX(1em) scale(1.01);
+    padding: 1em 0.5em !important;
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
@@ -425,7 +429,7 @@ h2,
       padding: .5em; }
   .opensource ul li:before {
     content: " > ";
-    line-height: 1.8em;
+    line-height: 3.2em;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -448,6 +452,7 @@ h2,
   .opensource ul li:hover {
     -webkit-transform: translateX(1em) scale(1.01);
             transform: translateX(1em) scale(1.01);
+    padding: 1em 0.5em !important;
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
@@ -470,7 +475,7 @@ h2,
       padding: .5em; }
   .projects ul li:before {
     content: " > ";
-    line-height: 1.8em;
+    line-height: 3.2em;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -493,6 +498,7 @@ h2,
   .projects ul li:hover {
     -webkit-transform: translateX(1em) scale(1.01);
             transform: translateX(1em) scale(1.01);
+    padding: 1em 0.5em !important;
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
@@ -521,7 +527,7 @@ h2,
       padding: .5em; }
   .experience .job .details ul li:before {
     content: " > ";
-    line-height: 1.8em;
+    line-height: 3.2em;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -544,6 +550,7 @@ h2,
   .experience .job .details ul li:hover {
     -webkit-transform: translateX(1em) scale(1.01);
             transform: translateX(1em) scale(1.01);
+    padding: 1em 0.5em !important;
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
