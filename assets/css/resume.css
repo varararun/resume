@@ -581,4 +581,6 @@ h2,
   section > .section-header {
     text-align: center; }
   .scroll-btn {
-    display: none; } }
+    display: none; }
+  .tech-icons-list img {
+    height: 3em !important; } }
