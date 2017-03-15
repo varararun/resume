@@ -410,9 +410,14 @@ h2,
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
 
-.opensource ul h4 .site-link {
-  color: #089ee5 !important;
-  font-size: .8em; }
+.skills ul h4 {
+  font-weight: 600 !important; }
+
+.opensource ul h4 {
+  font-weight: 600 !important; }
+  .opensource ul h4 .site-link {
+    color: #089ee5 !important;
+    font-size: .8em; }
 
 .opensource ul li {
   padding: 0.3em 0.5em !important;
@@ -502,6 +507,9 @@ h2,
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
 
+.projects ul h4 {
+  font-weight: 600 !important; }
+
 .experience .job h4 .details-btn .details-icon {
   color: #089ee5 !important; }
 
@@ -559,9 +567,13 @@ h2,
   text-align: center;
   padding: 0.5em; }
 
-.achievements h4 a {
+.achievements .patent a {
   font-weight: 200;
   color: #089ee5 !important; }
+
+.achievements .achievement p {
+  font-weight: 100;
+  font-size: .9em; }
 
 .scroll-btn {
   color: #089ee5 !important;

@@ -314,12 +314,16 @@ h2,
         transparent,
         $color-accent,
         $bullet-default);
+        h4 {
+            font-weight: 600 !important;
+        }
     }
 }
 
 .opensource {
     ul {
         h4 {
+            font-weight: 600 !important;
             .site-link {
                 color: $color-accent !important;
                 font-size: .8em;
@@ -338,6 +342,9 @@ h2,
         rgba(0, 0, 0, .1),
         $color-accent,
         $bullet-default);
+        h4 {
+            font-weight: 600 !important;
+        }
     }
 }
 
@@ -372,10 +379,16 @@ h2,
 }
 
 .achievements {
-    h4 {
+    .patent {
         a {
             font-weight: 200;
             color: $color-accent !important;
+        }
+    }
+    .achievement {
+        p {
+            font-weight: 100;
+            font-size: .9em;
         }
     }
 }
