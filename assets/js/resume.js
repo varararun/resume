@@ -18,17 +18,30 @@ var Resume = {
         $('.details-btn').click(function () {
             $(_this).find('.details-icon').toggleClass('fa-caret-down').toggleClass('fa-caret-up');
         });
-        $('.scrolltop-btn').click(function () {
-            $('body').animate({
-                scrollTop: 0
-            }, "slow");
+        $('.scroll-btn').click(function () {
+            if ($('.scroll-btn').hasClass('top')) {
+                $('body').animate({
+                    scrollTop: 0
+                }, "slow");
+                return true;
+            }
+            var currentPosition = $(window).scrollTop() + 5;
+            $('section').each(function (index) {
+                var nextPosition = $($('section')[index]).offset().top;
+                if (nextPosition > currentPosition) {
+                    $('body').animate({
+                        scrollTop: nextPosition
+                    }, "slow");
+                    return false;
+                }
+            });
         });
         $(window).scroll(function (event) {
-            if ($(window).scrollTop() > 100) {
-                $('.scrolltop-btn').removeClass('scrolltop-btn-hidden');
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                $('.scroll-btn').addClass('top');
             }
             else {
-                $('.scrolltop-btn').addClass('scrolltop-btn-hidden');
+                $('.scroll-btn').removeClass('top');
             }
         });
     },

@@ -1,5 +1,8 @@
 $color-accent: #089ee5;
 $border-size: 3px;
+$divider: " / ";
+$font-weight-default: 100;
+$bullet-default: " > ";
 $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
@@ -13,12 +16,12 @@ sans-serif;
         a {
             padding-right: 1em;
             &:hover {
-                padding: .5em;
+                padding-right: 1.1em;
             }
         }
         &:before {
             content: $bullet;
-            line-height: 3.2em;
+            line-height: 1.8em;
             position: absolute;
             z-index: -1;
             top: 0;
@@ -34,11 +37,9 @@ sans-serif;
         }
         &:hover {
             transform: translateX(1em) scale(1.01);
-            padding: 1em 0.5em !important;
             transform-origin: left;
             opacity: .7;
             background-color: $highlight-color !important;
-            font-weight: 200;
             color: $text-color;
         }
         &:hover:before {
@@ -50,7 +51,7 @@ sans-serif;
 html,
 body {
     font-family: $font-family;
-    font-weight: 100;
+    font-weight: $font-weight-default;
     font-size: 1em;
 }
 
@@ -92,6 +93,8 @@ section {
     transition: .3s ease-in-out;
     overflow: visible;
     word-wrap: break-word;
+    font-weight: 300;
+    font-size: 1.05em;
 }
 
 h1,
@@ -118,7 +121,7 @@ h6 {
 .opensource>span:after,
 .skills>ul>li>span:after,
 .work-details>span:nth-child(odd):after {
-    content: " || ";
+    content: $divider;
     color: $color-accent;
 }
 
@@ -182,7 +185,7 @@ h2,
     &.nav-open {
         visibility: visible;
         opacity: 1;
-        z-index: 5;
+        z-index: 998;
         transform: translateX(0);
     }
     .nav-menu {
@@ -191,7 +194,7 @@ h2,
         ul {
             padding: 2em 0 !important;
             width: 100%;
-            @include list-item-highlight(rgba(0, 0, 0, .1), transparent, inherit, "");
+            @include list-item-highlight(transparent, transparent, inherit, "");
             li {
                 padding: .1em 1em !important;
                 a {
@@ -252,6 +255,10 @@ h2,
             border: 3px solid $color-accent;
             padding: .5em;
             display: inline;
+            i:after {
+                content: $divider;
+                color: $color-accent;
+            }
         }
         &:hover {
             transform: scale(1.1);
@@ -284,11 +291,11 @@ h2,
 
 .info {
     ul {
-        font-size: 1.3em;
+        font-size: 1.1em;
         @include list-item-highlight(transparent,
         transparent,
         $color-accent,
-        " > ");
+        $bullet-default);
     }
 }
 
@@ -297,7 +304,7 @@ h2,
         @include list-item-highlight(transparent,
         rgba(0, 0, 0, .1),
         $color-accent,
-        " > ");
+        $bullet-default);
     }
 }
 
@@ -306,7 +313,7 @@ h2,
         @include list-item-highlight(transparent,
         transparent,
         $color-accent,
-        " > ");
+        $bullet-default);
     }
 }
 
@@ -321,7 +328,7 @@ h2,
         @include list-item-highlight(transparent,
         rgba(0, 0, 0, .1),
         $color-accent,
-        " > ");
+        $bullet-default);
     }
 }
 
@@ -330,7 +337,7 @@ h2,
         @include list-item-highlight(transparent,
         rgba(0, 0, 0, .1),
         $color-accent,
-        " > ");
+        $bullet-default);
     }
 }
 
@@ -343,15 +350,22 @@ h2,
                 }
             }
         }
+        .summary {
+            font-weight: 100;
+            margin: .5em 0;
+            font-size: .9em;
+        }
         .details {
-            .summary {
-                text-align: center;
-            }
             ul {
                 @include list-item-highlight(transparent,
                 rgba(0, 0, 0, .1),
                 $color-accent,
-                " > ");
+                $bullet-default);
+            }
+            .environment {
+                background-color: rgba(0, 0, 0, .1);
+                text-align: center;
+                padding: 0.5em;
             }
         }
     }
@@ -366,7 +380,7 @@ h2,
     }
 }
 
-.scrolltop-btn {
+.scroll-btn {
     color: $color-accent !important;
     font-size: 3em;
     cursor: pointer;
@@ -374,9 +388,9 @@ h2,
     position: fixed;
     right: .2em;
     bottom: 0em;
-    &.scrolltop-btn-hidden {
-        opacity: 0;
-        visibility: hidden;
+    z-index: 997;
+    &.top {
+        transform: rotateX(180deg);
     }
 }
 
