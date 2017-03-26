@@ -3,6 +3,7 @@ $border-size: 3px;
 $divider: " / ";
 $font-weight-default: 100;
 $bullet-default: " > ";
+$color-summary: rgba(0, 0, 0, .6);
 $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
@@ -272,6 +273,12 @@ h2,
         font-weight: 300;
         text-transform: uppercase;
     }
+    .summary {
+        color: $color-summary !important;
+        .fa {
+            color: initial;
+        }
+    }
     .dl-resume-header {
         margin-top: 2.5em;
         margin-bottom: .6em;
@@ -384,6 +391,7 @@ h2,
             }
         }
         .summary {
+            color: $color-summary;
             font-weight: 300;
             margin: .5em 0;
             font-size: .9em;
@@ -414,7 +422,8 @@ h2,
         }
     }
     .achievement {
-        p {
+        .summary {
+            color: $color-summary;
             font-weight: 300;
             font-size: .9em;
             a {

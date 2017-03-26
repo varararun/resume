@@ -246,6 +246,10 @@ h2,
     font-size: 1em;
     font-weight: 300;
     text-transform: uppercase; }
+  .header .summary {
+    color: rgba(0, 0, 0, 0.6) !important; }
+    .header .summary .fa {
+      color: initial; }
   .header .dl-resume-header {
     margin-top: 2.5em;
     margin-bottom: .6em;
@@ -535,6 +539,7 @@ h2,
   color: #089ee5 !important; }
 
 .experience .job .summary {
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 300;
   margin: .5em 0;
   font-size: .9em; }
@@ -594,10 +599,11 @@ h2,
   font-weight: 200;
   color: #089ee5 !important; }
 
-.achievements .achievement p {
+.achievements .achievement .summary {
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 300;
   font-size: .9em; }
-  .achievements .achievement p a {
+  .achievements .achievement .summary a {
     font-weight: 200;
     color: #089ee5 !important; }
 
