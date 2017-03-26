@@ -384,11 +384,14 @@ h2,
             }
         }
         .summary {
-            font-weight: 100;
+            font-weight: 300;
             margin: .5em 0;
             font-size: .9em;
         }
         .details {
+            .job-detail-label {
+                font-weight: 600 !important;
+            }
             ul {
                 @include list-item-highlight(transparent,
                 rgba(0, 0, 0, .1),
@@ -412,8 +415,12 @@ h2,
     }
     .achievement {
         p {
-            font-weight: 100;
+            font-weight: 300;
             font-size: .9em;
+            a {
+                font-weight: 200;
+                color: $color-accent !important;
+            }
         }
     }
 }

@@ -535,9 +535,12 @@ h2,
   color: #089ee5 !important; }
 
 .experience .job .summary {
-  font-weight: 100;
+  font-weight: 300;
   margin: .5em 0;
   font-size: .9em; }
+
+.experience .job .details .job-detail-label {
+  font-weight: 600 !important; }
 
 .experience .job .details ul li {
   padding: 0.3em 0.5em !important;
@@ -592,8 +595,11 @@ h2,
   color: #089ee5 !important; }
 
 .achievements .achievement p {
-  font-weight: 100;
+  font-weight: 300;
   font-size: .9em; }
+  .achievements .achievement p a {
+    font-weight: 200;
+    color: #089ee5 !important; }
 
 .scroll-btn {
   color: #089ee5 !important;
