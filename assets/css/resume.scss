@@ -276,13 +276,15 @@ h2,
     .summary {
         position: relative;
         color: $color-summary !important;
-        padding: 0 1em;
+        padding: 0 1.4em;
         &:before {
             content: "\f10d";
             font: normal normal normal 14px/1 FontAwesome;
             color: initial;
             position: absolute;
             left: 0;
+            font-size: 1.3em;
+            filter: blur(1.2px);
             top: 0;
         }
         &:after {
@@ -291,6 +293,8 @@ h2,
             color: initial;
             position: absolute;
             right: 0;
+            font-size: 1.3em;
+            filter: blur(1.2px);
             top: 0;
         }
     }

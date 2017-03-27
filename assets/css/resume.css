@@ -249,13 +249,16 @@ h2,
   .header .summary {
     position: relative;
     color: rgba(0, 0, 0, 0.6) !important;
-    padding: 0 1em; }
+    padding: 0 1.4em; }
     .header .summary:before {
       content: "\f10d";
       font: normal normal normal 14px/1 FontAwesome;
       color: initial;
       position: absolute;
       left: 0;
+      font-size: 1.3em;
+      -webkit-filter: blur(1.2px);
+              filter: blur(1.2px);
       top: 0; }
     .header .summary:after {
       content: "\f10e";
@@ -263,6 +266,9 @@ h2,
       color: initial;
       position: absolute;
       right: 0;
+      font-size: 1.3em;
+      -webkit-filter: blur(1.2px);
+              filter: blur(1.2px);
       top: 0; }
   .header .dl-resume-header {
     margin-top: 2.5em;
