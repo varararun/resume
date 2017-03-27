@@ -270,13 +270,28 @@ h2,
     }
     .work-details {
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 600;
         text-transform: uppercase;
     }
     .summary {
+        position: relative;
         color: $color-summary !important;
-        .fa {
+        padding: 0 1em;
+        &:before {
+            content: "\f10d";
+            font: normal normal normal 14px/1 FontAwesome;
             color: initial;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &:after {
+            content: "\f10e";
+            font: normal normal normal 14px/1 FontAwesome;
+            color: initial;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
     .dl-resume-header {
