@@ -20,7 +20,8 @@
     "animate.css": "3.5.1",
     "wow": "1.1.2",
     "jquery.stellar": "^0.6.2",
-    "typed.js": "^1.1.4"
+    "typed.js": "^1.1.4",
+    "devicon": "*"
   },
   "resolutions": {
     "jquery": "1.9.1 - 2"

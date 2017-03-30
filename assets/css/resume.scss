@@ -326,11 +326,10 @@ h2,
         justify-content: center;
         align-items: stretch;
         align-content: stretch;
-        img {
-            width: auto;
-            height: 5em;
+        i {
+            font-size: 5em;
+            margin: .3em;
             transition: .5s ease-in-out;
-            margin: 1em;
             filter: grayscale(100%);
             &:hover {
                 transform: scale(1.2);

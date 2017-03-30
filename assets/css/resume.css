@@ -305,15 +305,14 @@ h2,
           align-items: stretch;
   -ms-flex-line-pack: stretch;
       align-content: stretch; }
-  .interests .tech-icons-list img {
-    width: auto;
-    height: 5em;
+  .interests .tech-icons-list i {
+    font-size: 5em;
+    margin: .3em;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    margin: 1em;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
-    .interests .tech-icons-list img:hover {
+    .interests .tech-icons-list i:hover {
       -webkit-transform: scale(1.2);
               transform: scale(1.2);
       -webkit-filter: grayscale(0);
