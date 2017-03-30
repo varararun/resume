@@ -115,8 +115,8 @@ h2,
     background-color: #089ee5;
     margin: 0.3em;
     border-radius: 1em;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out; }
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out; }
   .nav-btn.nav-close .nav-icon > .first {
     -webkit-transform: rotate(-45deg) translate(0, 0em);
             transform: rotate(-45deg) translate(0, 0em);
