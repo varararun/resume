@@ -231,7 +231,8 @@ h2,
     height: 10em;
     max-width: 20em;
     margin: 1.5em auto;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     .header .business-card .front {
       width: 100%;
       height: 100%;
@@ -258,9 +259,9 @@ h2,
           font-weight: 600 !important;
           font-size: 2em; }
     .header .business-card .back {
-      width: 100%;
       height: 100%;
       position: absolute;
+      left: -50%;
       top: 0;
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out;
@@ -277,18 +278,14 @@ h2,
         border-radius: 5em;
         background-position: center center;
         border: 0.2em solid rgba(5, 15, 30, 0.9);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        margin: 0 auto 2em;
         -webkit-filter: grayscale(100%);
                 filter: grayscale(100%);
         -webkit-transition: .1s ease-in-out;
         transition: .1s ease-in-out; }
         .header .business-card .back .profile:hover {
-          -webkit-transform: translate(-50%, -50%) scale(1.1);
-                  transform: translate(-50%, -50%) scale(1.1);
+          -webkit-transform: scale(1.1);
+                  transform: scale(1.1);
           -webkit-filter: grayscale(0);
                   filter: grayscale(0); }
     .header .business-card:hover .back {
