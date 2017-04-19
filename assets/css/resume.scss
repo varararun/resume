@@ -167,6 +167,17 @@ h2,
     color: $color-accent !important;
 }
 
+.home-btn {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 300;
+    padding: 0em 0.2em;
+    color: #089ee5;
+}
+
 .nav-btn {
     position: fixed;
     width: 3em;
