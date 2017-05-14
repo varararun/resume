@@ -85,7 +85,9 @@ const Arun = {
   github:   'https://github.com/vararun',
   location: 'Dallas, TX',
   sayHello: function() {
-    alert(`${this.name.split(' ')[0]} says hello from ${this.location}!`);
+    let notificationStr = `${this.name.split(' ')[0]} says hello from ${this.location}!`;
+    console.info(notificationStr);
+    alert(notificationStr);
   }
 }
 Arun.sayHello();
@@ -146,6 +148,7 @@ Arun.sayHello();
                 <i class="devicon-docker-plain colored" data-toggle="tooltip" title="Docker" data-placement="top"></i>
                 <i class="devicon-amazonwebservices-original colored" data-toggle="tooltip" title="Amazon Web Services" data-placement="top"></i>
                 <i class="devicon-python-plain colored" data-toggle="tooltip" title="Python" data-placement="top"></i>
+                <i class="devicon-react-original colored" data-toggle="tooltip" title="React" data-placement="top"></i>
             </div>
         </section>
         <section class="info wow fadeIn" id="info">
