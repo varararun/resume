@@ -293,11 +293,11 @@ h2,
         .back {
             height: 100%;
             position: absolute;
-            left: -50%;
+            left: 50%;
             top: 0;
             transition: .3s ease-in-out;
             backface-visibility: hidden;
-            transform: rotateX(180deg);
+            transform: rotateX(180deg) translateX(-50%);
             padding: .5em;
             .profile {
                 background: url("../images/profile.jpg");
@@ -317,7 +317,7 @@ h2,
             }
         }
         &:hover .back {
-            transform: rotateX(360deg);
+            transform: rotateX(360deg) translateX(-50%);
         }
         &:hover .front {
             transform: rotateX(180deg);

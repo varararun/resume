@@ -268,14 +268,14 @@ h2,
     .header .business-card .back {
       height: 100%;
       position: absolute;
-      left: -50%;
+      left: 50%;
       top: 0;
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
-      -webkit-transform: rotateX(180deg);
-              transform: rotateX(180deg);
+      -webkit-transform: rotateX(180deg) translateX(-50%);
+              transform: rotateX(180deg) translateX(-50%);
       padding: .5em; }
       .header .business-card .back .profile {
         background: url("../images/profile.jpg");
@@ -296,8 +296,8 @@ h2,
           -webkit-filter: grayscale(0);
                   filter: grayscale(0); }
     .header .business-card:hover .back {
-      -webkit-transform: rotateX(360deg);
-              transform: rotateX(360deg); }
+      -webkit-transform: rotateX(360deg) translateX(-50%);
+              transform: rotateX(360deg) translateX(-50%); }
     .header .business-card:hover .front {
       -webkit-transform: rotateX(180deg);
               transform: rotateX(180deg); }
