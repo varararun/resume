@@ -711,4 +711,9 @@ h2,
   .scroll-btn {
     display: none; }
   .tech-icons-list img {
-    height: 3em !important; } }
+    height: 3em !important; }
+  .business-card .back {
+    display: none !important; }
+  .business-card .front {
+    -webkit-transform: none !important;
+            transform: none !important; } }

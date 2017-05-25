@@ -544,4 +544,12 @@ h2,
             height: 3em !important;
         }
     }
+    .business-card {
+        .back {
+            display: none !important;
+        }
+        .front {
+            transform: none !important;
+        }
+    }
 }
