@@ -17,31 +17,6 @@ var Resume = {
     $('.details-btn').click(() => {
       $(this).find('.details-icon').toggleClass('fa-caret-down').toggleClass('fa-caret-up');
     });
-    $('.scroll-btn').click(() => {
-      if ($('.scroll-btn').hasClass('top')) {
-        $('body').animate({
-          scrollTop: 0
-        }, "slow");
-        return true;
-      }
-      var currentPosition = $(window).scrollTop() + 5;
-      $('section').each((index) => {
-        let nextPosition = $($('section')[index]).offset().top;
-        if (nextPosition > currentPosition) {
-          $('body').animate({
-            scrollTop: nextPosition
-          }, "slow");
-          return false;
-        }
-      });
-    });
-    $(window).scroll((event) => {
-      if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-        $('.scroll-btn').addClass('top');
-      } else {
-        $('.scroll-btn').removeClass('top');
-      }
-    });
   },
   loadKeyboardEvents: () => {
     document.onkeydown = (e) => {
