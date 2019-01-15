@@ -22,27 +22,27 @@ var Resume = {
     loadKeyboardEvents: function () {
         document.onkeydown = function (e) {
             switch (e.keyCode) {
-                case 37:
+                case 37: // left arrrow
                     if ($("nav").hasClass("nav-open")) {
                         $(".nav-btn").click();
                     }
                     break;
-                case 39:
+                case 39: // right arrrow
                     if (!$("nav").hasClass("nav-open")) {
                         $(".nav-btn").click();
                     }
                     break;
-                case 27:
+                case 27: // esc
                     if ($("nav").hasClass("nav-open")) {
                         $(".nav-btn").click();
                     }
                     break;
-                case 8:
+                case 8: // delete/backspace
                     if ($("nav").hasClass("nav-open")) {
                         $(".nav-btn").click();
                     }
                     break;
-                case 32:
+                case 32: // spacebar
                     $(".nav-btn").click();
                     break;
             }

@@ -1,4 +1,4 @@
-var Resume = {
+let Resume = {
   initialize: () => {
     Resume.loadEvents();
     Resume.loadKeyboardEvents();

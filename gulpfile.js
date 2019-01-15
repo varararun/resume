@@ -1,29 +1,29 @@
-var ts = require('gulp-typescript');
-var del = require('del');
-var pkg = require('./package.json');
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var header = require('gulp-header');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var beautify = require('gulp-jsbeautifier');
-var cleanCSS = require('gulp-clean-css');
-var tsProject = ts.createProject('tsconfig.json');
-var sourcemaps = require('gulp-sourcemaps');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync').create();
-var autoprefixer = require('gulp-autoprefixer');
+let ts = require('gulp-typescript');
+let del = require('del');
+let pkg = require('./package.json');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let header = require('gulp-header');
+let rename = require('gulp-rename');
+let uglify = require('gulp-uglify');
+let jshint = require('gulp-jshint');
+let stylish = require('jshint-stylish');
+let beautify = require('gulp-jsbeautifier');
+let cleanCSS = require('gulp-clean-css');
+let tsProject = ts.createProject('tsconfig.json');
+let sourcemaps = require('gulp-sourcemaps');
+let browserSync = require('browser-sync').create();
+let autoprefixer = require('gulp-autoprefixer');
+let plumber = require('gulp-plumber');
 
-var paths = {
+let paths = {
   scss: 'assets/css/resume.scss',
   css: 'assets/css/resume.css',  
   ts:'assets/js/resume.ts',
   js:'assets/js/resume.js'
 }
 
-var banner = ['/*\n',
+const banner = ['/*\n',
   ' * <%= pkg.title %> (<%= pkg.homepage %>)\n',
   ' * Copyright 2016-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
   ' */\n',
@@ -32,18 +32,21 @@ var banner = ['/*\n',
 
 /** Miscellaneous Tasks **/
 
-gulp.task('jshint', function () {
-  return gulp.src([
+function jshintReport(done) {
+  gulp.src([
       paths.ts,
       '*.js'
     ])
+    .pipe(plumber())
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
     .pipe(jshint.reporter('fail'));
-});
 
-gulp.task('format', function () {
-  return gulp.src([
+    done();
+};
+
+function format(done) {
+  gulp.src([
        paths.scss,
        paths.ts,
       'index.html',
@@ -51,31 +54,40 @@ gulp.task('format', function () {
     ], {
       base: './'
     })
+    .pipe(plumber())
     .pipe(beautify())
     .pipe(gulp.dest('./'));
-});
+
+    done();
+};
 
 /** JavaScript Tasks **/
 
-gulp.task('clean-js', function () {
-  return del.sync([
+function cleanJs(done) {
+  del.sync([
     'assets/js/*.min.js',
     'assets/js/*.map'
   ], {
     force: true
   });
-});
 
-gulp.task('typescript', function () {
+  done();
+};
+
+function typescript(done) {
   tsProject.src()
+    .pipe(plumber())
     .pipe(tsProject())
     .js.pipe(gulp.dest('assets/js'));
-});
 
-gulp.task('minify-js', function () {
-  return gulp.src([
+    done();
+};
+
+function minifyJs(done) {
+  gulp.src([
        paths.js
     ])
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
@@ -84,42 +96,53 @@ gulp.task('minify-js', function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest('assets/js'));
-});
 
-gulp.task('sourcemap-js', function () {
-  return gulp.src([
+    done();
+};
+
+function sourcemapJs(done) {
+  gulp.src([
       'assets/js/*.min.js',
       '!assets/js/*spec.js'
     ])
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('assets/js'));
-});
+
+    done();
+};
 
 /** CSS Tasks **/
 
-gulp.task('clean-css', function () {
-  return del.sync([
+function cleanCss(done) {
+  del.sync([
     'assets/css/*.min.css',
     'assets/css/*.map'
   ], {
     force: true
   });
-});
 
-gulp.task('scss', function () {
-  return gulp.src('assets/css/**/*.scss')
+  done();
+};
+
+function scss(done) {
+  gulp.src('assets/css/**/*.scss')
+    .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
     }))
     .pipe(gulp.dest('assets/css'));
-});
 
-gulp.task('minify-css', ['scss'], function () {
-  return gulp.src([
+    done();
+};
+
+function minifyCss(done) {
+  gulp.src([
        paths.css
     ])
+    .pipe(plumber())
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -130,49 +153,54 @@ gulp.task('minify-css', ['scss'], function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest('assets/css'));
-});
 
-gulp.task('sourcemap-css', function () {
-  return gulp.src([
+    done();
+};
+
+function sourcemapCss(done) {
+  gulp.src([
       'assets/css/*.min.css'
     ])
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('assets/css'));
-});
+    
+    done();
+};
 
 /** Server Task **/
 
-gulp.task('browserSync', function () {
-  return browserSync.init({
+function serve(done) {
+  browserSync.init({
     server: {
-      baseDir: ''
+      baseDir: '.'
     },
     port: process.env.PORT || 4790
   });
-});
+  
+  done();
+};
+
+function reload(done) {
+  browserSync.reload();
+  done();
+};
 
 /** Task Flows **/
 
-gulp.task('js', function () {
-  return runSequence('clean-js', 'typescript', 'minify-js', 'sourcemap-js');
-});
+const js = gulp.series(cleanJs, typescript, minifyJs, sourcemapJs, reload);
 
-gulp.task('css', function () {
-  return runSequence('clean-css', 'scss', 'minify-css', 'sourcemap-css');
-});
+const css = gulp.series(cleanCss, scss, minifyCss, sourcemapCss, reload);
 
-gulp.task('minify', function () {
-  return runSequence('css', 'js');
-});
+const minify = gulp.series(css, js);
 
-gulp.task('serve', function () {
-  runSequence('minify', 'browserSync');
-  gulp.watch('assets/css/**/*.scss', ['css', browserSync.reload]);
-  gulp.watch('assets/js/**/*.ts', ['js', browserSync.reload]);
-  gulp.watch('index.html', browserSync.reload);
-});
+function watch() {
+  gulp.watch('assets/css/**/*.scss', css);
+  gulp.watch('assets/js/**/*.ts', js);
+  gulp.watch('index.html', reload);
+};
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series(minify, serve, watch));
 
 module.exports = gulp;
