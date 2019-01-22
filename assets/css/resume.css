@@ -384,22 +384,6 @@ h2,
               filter: grayscale(0);
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out; }
-  .interests .tech-icons-list .tech-icon {
-    height: 84px;
-    width: 84px;
-    margin: 1.3em;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    text-shadow: 0.02em 0.02em 0.03em rgba(0, 0, 0, 0.5); }
-    .interests .tech-icons-list .tech-icon:hover {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-      -webkit-filter: grayscale(0);
-              filter: grayscale(0);
-      -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out; }
 
 .info ul {
   font-size: 1.1em; }

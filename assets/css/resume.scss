@@ -401,19 +401,6 @@ h2,
                 transition: .3s ease-in-out;
             }
         }
-        .tech-icon {
-            height: 84px;
-            width: 84px;
-            margin: 1.3em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            text-shadow: 0.02em 0.02em 0.03em rgba(0, 0, 0, .5);
-            &:hover {
-                transform: scale(1.2);
-                filter: grayscale(0);
-                transition: .3s ease-in-out;
-            }
-        }
     }
 }
 
