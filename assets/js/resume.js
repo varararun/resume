@@ -4,6 +4,14 @@ var Resume = {
         Resume.loadEvents();
         Resume.loadKeyboardEvents();
     },
+    closeLoader: function () {
+        setTimeout(function () {
+            $('#loader').addClass('hide-loader');
+        }, 2000);
+        setTimeout(function () {
+            $('#loader').remove();
+        }, 3000);
+    },
     loadEvents: function () {
         $('.nav-btn').click(function () {
             $('.nav-btn').toggleClass('nav-close');

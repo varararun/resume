@@ -3,6 +3,14 @@ let Resume = {
     Resume.loadEvents();
     Resume.loadKeyboardEvents();
   },
+  closeLoader: () => {
+    setTimeout(()=> {
+      $('#loader').addClass('hide-loader');    
+    },2000);    
+    setTimeout(()=> {
+      $('#loader').remove();    
+    },3000);    
+  },
   loadEvents: () => {
     $('.nav-btn').click(() => {
       $('.nav-btn').toggleClass('nav-close');
@@ -48,4 +56,5 @@ let Resume = {
     };
   }
 };
+
 Resume.initialize();
