@@ -5,7 +5,8 @@ let Resume = {
   },
   closeLoader: () => {
     setTimeout(()=> {
-      $('#loader').addClass('hide-loader');    
+      $('#loader').addClass('hide-loader');
+      $('body').removeClass('disable-scroll');    
     },2000);    
     setTimeout(()=> {
       $('#loader').remove();    
@@ -16,11 +17,13 @@ let Resume = {
       $('.nav-btn').toggleClass('nav-close');
       $('.nav').toggleClass('nav-open');
       $('.page-wrap').toggleClass('page-wrap-disable');
+      $('body').toggleClass('disable-scroll');
     });
     $('.nav-menu>ul>li>a').click(() => {
       $('.nav-btn').toggleClass('nav-close');
       $('.nav').toggleClass('nav-open');
       $('.page-wrap').toggleClass('page-wrap-disable');
+      $('body').toggleClass('disable-scroll');
     });
     $('.details-btn').click(() => {
       $(this).find('.details-icon').toggleClass('fa-caret-down').toggleClass('fa-caret-up');

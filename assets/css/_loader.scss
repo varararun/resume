@@ -2,7 +2,7 @@
     background-color: #fff;
     z-index: 10;
     transition: .6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     .loader-container {

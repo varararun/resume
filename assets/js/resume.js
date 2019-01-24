@@ -7,6 +7,7 @@ var Resume = {
     closeLoader: function () {
         setTimeout(function () {
             $('#loader').addClass('hide-loader');
+            $('body').removeClass('disable-scroll');
         }, 2000);
         setTimeout(function () {
             $('#loader').remove();
@@ -17,11 +18,13 @@ var Resume = {
             $('.nav-btn').toggleClass('nav-close');
             $('.nav').toggleClass('nav-open');
             $('.page-wrap').toggleClass('page-wrap-disable');
+            $('body').toggleClass('disable-scroll');
         });
         $('.nav-menu>ul>li>a').click(function () {
             $('.nav-btn').toggleClass('nav-close');
             $('.nav').toggleClass('nav-open');
             $('.page-wrap').toggleClass('page-wrap-disable');
+            $('body').toggleClass('disable-scroll');
         });
         $('.details-btn').click(function () {
             $(_this).find('.details-icon').toggleClass('fa-caret-down').toggleClass('fa-caret-up');

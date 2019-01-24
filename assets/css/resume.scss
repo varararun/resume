@@ -54,6 +54,9 @@ body {
     font-family: $font-family;
     font-weight: $font-weight-default;
     font-size: 1em;
+    &.disable-scroll {
+        overflow-y: hidden;
+    }
 }
 
 i,
@@ -220,7 +223,7 @@ h2,
     &.nav-open {
         visibility: visible;
         opacity: 1;
-        z-index: 998;
+        z-index: 4;
         transform: translateX(0);
     }
     .nav-menu {
@@ -516,28 +519,11 @@ h2,
     }
 }
 
-.scroll-btn {
-    color: $color-accent !important;
-    font-size: 3em;
-    cursor: pointer;
-    transition: .8s cubic-bezier(0.83, -0.03, 0.54, 0.99);
-    position: fixed;
-    right: .2em;
-    bottom: 0em;
-    z-index: 997;
-    &.top {
-        transform: rotateX(180deg);
-    }
-}
-
 @media handheld,
 (max-width: 640px),
 (max-height: 400px) {
     section>.section-header {
         text-align: center;
-    }
-    .scroll-btn {
-        display: none;
     }
     .business-card {
         .back {
