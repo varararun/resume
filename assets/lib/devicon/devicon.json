@@ -72,6 +72,14 @@
     }
   },
   {
+    "name": "behance",
+    "tags": ["social", "website"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "bitbucket",
     "tags": [],
     "versions": {
@@ -104,6 +112,22 @@
     }
   },
   {
+    "name": "cakephp",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ceylon",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "chrome",
     "tags": ["browser"],
     "versions": {
@@ -132,6 +156,14 @@
     "tags": [],
     "versions": {
       "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "couchdb",
+    "tags": ["database"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },
@@ -184,6 +216,14 @@
     }
   },
   {
+    "name": "devicon",
+    "tags": ["iconset"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "django",
     "tags": [],
     "versions": {
@@ -224,11 +264,43 @@
     }
   },
   {
+    "name": "electron",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "elm",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ember",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original-wordmark"],
+      "font": ["original-wordmark"]
+    }
+  },
+  {
     "name": "erlang",
     "tags": [],
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "express",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
     }
   },
   {
@@ -336,6 +408,14 @@
     }
   },
   {
+    "name": "handlebars",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "heroku",
     "tags": ["cloud"],
     "versions": {
@@ -373,6 +453,22 @@
     "versions": {
       "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
       "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "intellij",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "ionic",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original", "original-wordmark"]
     }
   },
   {
@@ -448,6 +544,14 @@
     }
   },
   {
+    "name": "linkedin",
+    "tags": ["social", "auth"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "linux",
     "tags": ["os"],
     "versions": {
@@ -520,6 +624,14 @@
     }
   },
   {
+    "name": "npm",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original-wordmark"],
+      "font": ["original-wordmark"]
+    }
+  },
+  {
     "name": "oracle",
     "tags": ["database"],
     "versions": {
@@ -576,6 +688,14 @@
     }
   },
   {
+    "name": "pycharm",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "rails",
     "tags": ["framework"],
     "versions": {
@@ -616,6 +736,14 @@
     }
   },
   {
+    "name": "rubymine",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "safari",
     "tags": ["browser"],
     "versions": {
@@ -640,6 +768,22 @@
     }
   },
   {
+    "name": "sketch",
+    "tags": ["application"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+      "font": ["line", "line-wordmark"]
+    }
+  },
+  {
+    "name": "slack",
+    "tags": ["chat"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "sourcetree",
     "tags": ["version-control"],
     "versions": {
@@ -656,11 +800,35 @@
     }
   },
   {
+    "name": "stylus",
+    "tags": ["css", "pre-processor"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "swift",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "symfony",
     "tags": ["framework"],
     "versions": {
       "svg": ["original", "original-wordmark"],
       "font": ["original", "original-wordmark"]
+    }
+  },
+  {
+    "name": "tomcat",
+    "tags": ["server"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "line", "line-wordmark"],
+      "font": ["line", "line-wordmark"]
     }
   },
   {
@@ -704,11 +872,51 @@
     }
   },
   {
+    "name": "vagrant",
+    "tags": ["platform"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
     "name": "vim",
     "tags": ["editor"],
     "versions": {
       "svg": ["original", "plain"],
       "font": ["plain"]
+    }
+  },
+  {
+	  "name": "visualstudio",
+	  "tags": ["editor"],
+	  "versions": {
+		  "svg": ["plain", "plain-wordmark"],
+		  "font": ["plain", "plain-wordmark"]
+	  }
+  },
+  {
+    "name": "vuejs",
+    "tags": ["framework"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark", "line", "line-wordmark"],
+      "font": ["plain", "plain-wordmark", "line", "line-wordmark"]
+    }
+  },
+  {
+    "name": "webpack",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "webstorm",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
     }
   },
   {
@@ -724,6 +932,14 @@
     "tags": ["cms"],
     "versions": {
       "svg": ["original", "plain", "plain-wordmark"],
+      "font": ["plain", "plain-wordmark"]
+    }
+  },
+  {
+    "name": "yarn",
+    "tags": ["package", "manager"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
       "font": ["plain", "plain-wordmark"]
     }
   },

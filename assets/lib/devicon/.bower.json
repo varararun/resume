@@ -5,7 +5,7 @@
     ".jshintrc",
     "**/*.txt"
   ],
-  "homepage": "http://devicon.fr/",
+  "homepage": "http://konpa.github.io/devicon/",
   "repository": {
     "type": "git",
     "url": "git://github.com/konpa/devicon.git"
@@ -21,11 +21,11 @@
     "font"
   ],
   "license": "MIT",
-  "_release": "d2ee8daa79",
+  "_release": "869d5deefd",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "d2ee8daa7989cc9e2811227f8c59ac8cfe16120f"
+    "commit": "869d5deefdc9732193d28ed0a2495bfc2708d128"
   },
   "_source": "https://github.com/konpa/devicon.git",
   "_target": "*",

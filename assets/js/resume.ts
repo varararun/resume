@@ -5,7 +5,8 @@ let Resume = {
   },
   closeLoader: () => {
     setTimeout(()=> {
-      $('#loader, .page-wrap').addClass('loaded');    
+      $('#loader, .page-wrap').addClass('loaded');   
+      $('body').toggleClass('disable-scroll'); 
     },2000);    
     setTimeout(()=> {
       $('#loader').remove();    
