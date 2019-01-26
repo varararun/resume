@@ -8,18 +8,22 @@ $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
 sans-serif;
+
 @mixin list-item-highlight($highlight-color, $bg-color, $text-color, $bullet) {
     li {
         padding: 0.3em 0.5em !important;
         background-color: $bg-color;
         border-bottom: 1px solid white;
         transform: perspective(1px) translateZ(0);
+
         a {
             padding-right: 1em;
+
             &:hover {
                 padding-right: 1.1em;
             }
         }
+
         &:before {
             content: $bullet;
             line-height: 1.8em;
@@ -36,6 +40,7 @@ sans-serif;
             transition-duration: 0.5s;
             transition-timing-function: ease-out;
         }
+
         &:hover {
             transform: translateX(1em) scale(1.01);
             transform-origin: left;
@@ -43,6 +48,7 @@ sans-serif;
             background-color: $highlight-color !important;
             color: $text-color;
         }
+
         &:hover:before {
             transform: scaleX(1);
         }
@@ -54,6 +60,7 @@ body {
     font-family: $font-family;
     font-weight: $font-weight-default;
     font-size: 1em;
+
     &.disable-scroll {
         overflow-y: hidden;
     }
@@ -184,6 +191,7 @@ h2,
     z-index: 5;
     right: .2em;
     top: .5em;
+
     .nav-icon>span {
         display: block;
         height: .2em;
@@ -193,14 +201,17 @@ h2,
         border-radius: 1em;
         transition: .1s ease-in-out;
     }
+
     &.nav-close {
         .nav-icon>.first {
             transform: rotate(-45deg) translate(0, 0em);
             transform-origin: right;
         }
+
         .nav-icon>.second {
             opacity: 0;
         }
+
         .nav-icon>.third {
             transform: rotate(45deg) translate(-.3em, -1.1em);
             transform-origin: left;
@@ -220,21 +231,26 @@ h2,
     transition: .3s ease-in-out;
     transform: translateX(-10%);
     overflow-x: hidden;
+
     &.nav-open {
         visibility: visible;
         opacity: 1;
         z-index: 4;
         transform: translateX(0);
     }
+
     .nav-menu {
         width: 100%;
         height: 100%;
+
         ul {
             padding: 2em 0 !important;
             width: 100%;
             @include list-item-highlight(transparent, transparent, inherit, "");
+
             li {
                 padding: .1em 1em !important;
+
                 a {
                     font-size: 10vmin;
                     font-weight: 200;
@@ -252,6 +268,12 @@ h2,
     transition: .3s ease-in-out;
     transform: translate(0);
     z-index: -1;
+    opacity: 0;
+
+    &.loaded {
+        opacity: 1;
+    }
+
     &.page-wrap-disable {
         opacity: 0;
         transform: translateX(10%);
@@ -261,6 +283,7 @@ h2,
 
 .header {
     text-align: center;
+
     .business-card {
         perspective: 30em;
         width: 95%;
@@ -269,6 +292,7 @@ h2,
         margin: 1.5em auto;
         position: relative;
         z-index: 1;
+
         .front {
             width: 100%;
             height: 100%;
@@ -278,11 +302,13 @@ h2,
             backface-visibility: hidden;
             transform: rotateY(0deg);
             z-index: 1;
+
             .work-details {
                 h1 {
                     font-weight: 600 !important;
                     font-size: 2em;
                 }
+
                 font-size: .9em;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -293,6 +319,7 @@ h2,
                 width: 100%;
             }
         }
+
         .back {
             height: 100%;
             position: absolute;
@@ -302,6 +329,7 @@ h2,
             backface-visibility: hidden;
             transform: rotateX(180deg) translateX(-50%);
             padding: .5em;
+
             .profile {
                 background: url("../img/profile.jpg");
                 height: 7em;
@@ -313,23 +341,28 @@ h2,
                 margin: 0 auto 2em;
                 filter: grayscale(100%);
                 transition: .1s ease-in-out;
+
                 &:hover {
                     transform: scale(1.1);
                     filter: grayscale(0);
                 }
             }
         }
+
         &:hover .back {
             transform: rotateX(360deg) translateX(-50%);
         }
+
         &:hover .front {
             transform: rotateX(180deg);
         }
     }
+
     .summary {
         position: relative;
         color: $color-summary !important;
         padding: 0 1.4em;
+
         &:before {
             content: "\f10d";
             font: normal normal normal 14px/1 FontAwesome;
@@ -340,6 +373,7 @@ h2,
             filter: blur(1.2px);
             top: 0;
         }
+
         &:after {
             content: "\f10e";
             font: normal normal normal 14px/1 FontAwesome;
@@ -351,11 +385,13 @@ h2,
             top: 0;
         }
     }
+
     .dl-resume-container {
         margin-top: 2.5em;
         margin-bottom: .6em;
         font-size: 1.2em;
         transition: .3s ease-in-out;
+
         .dl-resume-header {
             text-align: center;
             text-transform: uppercase;
@@ -363,17 +399,21 @@ h2,
             font-size: 1em;
             margin-bottom: .5em;
         }
+
         .dl-resume-body {
             padding: .5em .1em;
             margin: auto;
+
             a {
                 i {
                     padding: .1em 1em;
                     font-size: 2em;
+
                     &:hover {
                         transform: scale(1.2);
                     }
                 }
+
                 &:first-child:after {
                     content: $divider;
                     color: $color-accent;
@@ -392,12 +432,14 @@ h2,
         justify-content: center;
         align-items: stretch;
         align-content: stretch;
+
         i {
             text-shadow: 0.02em 0.02em 0.03em rgba(0, 0, 0, .5);
             font-size: 5em;
             margin: .3em;
             transition: .5s ease-in-out;
             filter: grayscale(100%);
+
             &:hover {
                 transform: scale(1.2);
                 filter: grayscale(0);
@@ -432,6 +474,7 @@ h2,
         transparent,
         $color-accent,
         $bullet-default);
+
         h4 {
             font-weight: 600 !important;
         }
@@ -442,11 +485,13 @@ h2,
     ul {
         h4 {
             font-weight: 600 !important;
+
             .site-link {
                 color: $color-accent !important;
                 font-size: .8em;
             }
         }
+
         @include list-item-highlight(transparent,
         rgba(0, 0, 0, .1),
         $color-accent,
@@ -460,6 +505,7 @@ h2,
         rgba(0, 0, 0, .1),
         $color-accent,
         $bullet-default);
+
         h4 {
             font-weight: 600 !important;
         }
@@ -475,22 +521,26 @@ h2,
                 }
             }
         }
+
         .summary {
             color: $color-summary;
             font-weight: 300;
             margin: .5em 0;
             font-size: .9em;
         }
+
         .details {
             .job-detail-label {
                 font-weight: 600 !important;
             }
+
             ul {
                 @include list-item-highlight(transparent,
                 rgba(0, 0, 0, .1),
                 $color-accent,
                 $bullet-default);
             }
+
             .environment {
                 background-color: rgba(0, 0, 0, .1);
                 padding: 0.5em;
@@ -506,11 +556,13 @@ h2,
             color: $color-accent !important;
         }
     }
+
     .achievement {
         .summary {
             color: $color-summary;
             font-weight: 300;
             font-size: .9em;
+
             a {
                 font-weight: 200;
                 color: $color-accent !important;
@@ -525,10 +577,12 @@ h2,
     section>.section-header {
         text-align: center;
     }
+
     .business-card {
         .back {
             display: none !important;
         }
+
         .front {
             transform: none !important;
         }

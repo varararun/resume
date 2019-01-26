@@ -5,12 +5,11 @@ let Resume = {
   },
   closeLoader: () => {
     setTimeout(()=> {
-      $('#loader').addClass('hide-loader');
-      $('body').removeClass('disable-scroll');    
+      $('#loader, .page-wrap').addClass('loaded');    
     },2000);    
     setTimeout(()=> {
       $('#loader').remove();    
-    },3000);    
+    },3000);     
   },
   loadEvents: () => {
     $('.nav-btn').click(() => {

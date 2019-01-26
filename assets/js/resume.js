@@ -6,8 +6,7 @@ var Resume = {
     },
     closeLoader: function () {
         setTimeout(function () {
-            $('#loader').addClass('hide-loader');
-            $('body').removeClass('disable-scroll');
+            $('#loader, .page-wrap').addClass('loaded');
         }, 2000);
         setTimeout(function () {
             $('#loader').remove();
