@@ -7,10 +7,10 @@ let Resume = {
     setTimeout(()=> {
       $('#loader, .page-wrap').addClass('loaded');   
       $('body').toggleClass('disable-scroll'); 
-    },2000);    
+    },1500);    
     setTimeout(()=> {
       $('#loader').remove();    
-    },3000);     
+    },2000);     
   },
   loadEvents: () => {
     $('.nav-btn').click(() => {

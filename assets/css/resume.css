@@ -319,8 +319,6 @@ h2,
       position: absolute;
       left: 0;
       font-size: 1.3em;
-      -webkit-filter: blur(1.2px);
-              filter: blur(1.2px);
       top: 0; }
     .header .summary:after {
       content: "\f10e";
@@ -330,8 +328,6 @@ h2,
       position: absolute;
       right: 0;
       font-size: 1.3em;
-      -webkit-filter: blur(1.2px);
-              filter: blur(1.2px);
       top: 0; }
   .header .dl-resume-container {
     margin-top: 2.5em;

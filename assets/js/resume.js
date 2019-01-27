@@ -8,10 +8,10 @@ var Resume = {
         setTimeout(function () {
             $('#loader, .page-wrap').addClass('loaded');
             $('body').toggleClass('disable-scroll');
-        }, 2000);
+        }, 1500);
         setTimeout(function () {
             $('#loader').remove();
-        }, 3000);
+        }, 2000);
     },
     loadEvents: function () {
         $('.nav-btn').click(function () {
