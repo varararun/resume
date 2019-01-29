@@ -1,8 +1,8 @@
 $color-accent: #089ee5;
 $border-size: 3px;
-$divider: " / ";
+$divider: ' / ';
 $font-weight-default: 100;
-$bullet-default: " > ";
+$bullet-default: ' > ';
 $color-summary: rgba(0, 0, 0, .6);
 $font-family: 'Montserrat',
 'Helvetica Neue',
@@ -246,7 +246,7 @@ h2,
         ul {
             padding: 2em 0 !important;
             width: 100%;
-            @include list-item-highlight(transparent, transparent, inherit, "");
+            @include list-item-highlight(transparent, transparent, inherit, '');
 
             li {
                 padding: .1em 1em !important;
@@ -284,78 +284,25 @@ h2,
 .header {
     text-align: center;
 
-    .business-card {
-        perspective: 30em;
-        width: 95%;
-        height: 10em;
-        max-width: 20em;
+    .work-details {
+        h1 {
+            font-weight: 600 !important;
+            font-size: 2em;
+        }
+
+        .profile {
+            border-radius: 50%;
+            width: 10em;
+            border: .2em solid rgba(5, 15, 30, .9);
+            margin: 0 auto 2em;
+            filter: grayscale(100%);
+        }
+
         margin: 1.5em auto;
-        position: relative;
-        z-index: 1;
-
-        .front {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            transition: .3s ease-in-out;
-            backface-visibility: hidden;
-            transform: rotateY(0deg);
-            z-index: 1;
-
-            .work-details {
-                h1 {
-                    font-weight: 600 !important;
-                    font-size: 2em;
-                }
-
-                font-size: .9em;
-                font-weight: 600;
-                text-transform: uppercase;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-            }
-        }
-
-        .back {
-            height: 100%;
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transition: .3s ease-in-out;
-            backface-visibility: hidden;
-            transform: rotateX(180deg) translateX(-50%);
-            padding: .5em;
-
-            .profile {
-                background: url("../img/profile.jpg");
-                height: 7em;
-                width: 7em;
-                background-size: cover;
-                border-radius: 5em;
-                background-position: center center;
-                border: .2em solid rgba(5, 15, 30, .9);
-                margin: 0 auto 2em;
-                filter: grayscale(100%);
-                transition: .1s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.1);
-                    filter: grayscale(0);
-                }
-            }
-        }
-
-        &:hover .back {
-            transform: rotateX(360deg) translateX(-50%);
-        }
-
-        &:hover .front {
-            transform: rotateX(180deg);
-        }
+        font-size: .9em;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 100%;
     }
 
     .summary {
@@ -364,7 +311,7 @@ h2,
         padding: 0 1.4em;
 
         &:before {
-            content: "\f10d";
+            content: '\f10d';
             font-family: 'Font Awesome\ 5 Free';
             font-weight: 900;
             color: initial;
@@ -375,7 +322,7 @@ h2,
         }
 
         &:after {
-            content: "\f10e";
+            content: '\f10e';
             font-family: 'Font Awesome\ 5 Free';
             font-weight: 900;
             color: initial;
@@ -520,13 +467,24 @@ h2,
                     color: $color-accent !important;
                 }
             }
+
+            &.role {
+                font-weight: 600 !important;
+            }
+        }
+
+        img {
+            width: 8em;
+            height: auto;
+            padding: .5em 0;
         }
 
         .summary {
-            color: $color-summary;
+            background-color: rgba(0, 0, 0, .1);
+            padding: .3em .5em !important;
+            font-size: 1.05em;
             font-weight: 300;
             margin: .5em 0;
-            font-size: .9em;
         }
 
         .details {
@@ -559,32 +517,14 @@ h2,
 
     .achievement {
         .summary {
-            color: $color-summary;
-            font-weight: 300;
-            font-size: .9em;
+            background-color: rgba(0, 0, 0, .1);
+            padding: .5em;
+            font-size: 1.05em;
 
             a {
                 font-weight: 200;
                 color: $color-accent !important;
             }
-        }
-    }
-}
-
-@media handheld,
-(max-width: 640px),
-(max-height: 400px) {
-    section>.section-header {
-        text-align: center;
-    }
-
-    .business-card {
-        .back {
-            display: none !important;
-        }
-
-        .front {
-            transform: none !important;
         }
     }
 }

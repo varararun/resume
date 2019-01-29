@@ -188,6 +188,6 @@ function watch() {
 
 gulp.task('format', format);
 
-gulp.task('default', gulp.series(minify, serve, watch));
+gulp.task('default', gulp.series(format, minify, serve, watch));
 
 module.exports = gulp;
