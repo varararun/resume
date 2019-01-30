@@ -2,15 +2,15 @@ $color-accent: #089ee5;
 $border-size: 3px;
 $divider: ' / ';
 $font-weight-default: 100;
-$bullet-default: ' > ';
 $color-summary: rgba(0, 0, 0, .6);
 $border-radius: 5px;
+$element-bg-color: transparent;
 $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
 sans-serif;
 
-@mixin list-item-highlight($highlight-color, $bg-color, $text-color, $bullet) {
+@mixin list-item-highlight($highlight-color, $bg-color, $text-color) {
     li {
         padding: 0.3em 0.5em !important;
         background-color: $bg-color;
@@ -25,29 +25,13 @@ sans-serif;
             }
         }
 
-        &:before {
-            content: $bullet;
-            line-height: 1.8em;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: -.5em;
-            right: 0;
-            bottom: 0;
-            background-color: $highlight-color !important;
-            transform: scaleX(0);
-            transform-origin: 0 50%;
-            transition-property: transform;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-out;
-        }
-
         &:hover {
             transform: translateX(1em) scale(1.01);
             transform-origin: left;
             opacity: .7;
             background-color: $highlight-color !important;
             color: $text-color;
+            border-bottom: 1px solid transparent;
         }
 
         &:hover:before {
@@ -58,6 +42,7 @@ sans-serif;
 
 html,
 body {
+    font-size: 12px;
     font-family: $font-family;
     font-weight: $font-weight-default;
 
@@ -97,8 +82,10 @@ div {
 }
 
 section {
+    position: relative;
+    background: #fffffff0 url('../img/bg-card.png') repeat-x center top;
+    background-size: cover;
     border-radius: 5px;
-    background: #fffffff0;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     max-width: 60em;
     margin: 1.5em auto;
@@ -111,19 +98,23 @@ section {
 }
 
 h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
     font-size: 24px;
 }
 
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
 h4 {
-    font-size: 18px;
+    font-size: 12px;
+}
+
+h5 {
+    font-size: 10px;
 }
 
 h1,
@@ -132,16 +123,16 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 300 !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-weight: 600 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #00a9ec33;
 }
 
 ::-webkit-scrollbar {
@@ -153,12 +144,11 @@ hr {
     font-size: 1em;
     margin: 1em auto;
     text-align: center;
+    font-weight: 600;
 }
 
-.experience>span:after,
+.experience>job>span:after,
 .environment>span:after,
-.projects>span:after,
-.opensource>span:after,
 .skills>ul>li>span:after,
 .work-details>span:nth-child(odd):after {
     content: $divider;
@@ -173,8 +163,9 @@ hr {
     content: '';
 }
 
-h2,
-.header-name {
+.header-name,
+.section-header {
+    text-transform: uppercase;
     color: $color-accent !important;
 }
 
@@ -189,10 +180,36 @@ h2,
     left: 0;
 }
 
+.pull-right {
+    float: right;
+}
+
+.section-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.4em 1em 0 0;
+
+    i {
+        font-size: 1.5em;
+    }
+}
+
+.accent-color {
+    color: $color-accent;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .page-wrap {
-    background-image: url('../img/bg.jpg');
+    background: white url('../img/bg.jpg') no-repeat fixed top;
     background-size: cover;
-    background-attachment: fixed;
     padding: 2em 1em 0;
     width: 100%;
     min-height: 100%;
@@ -215,8 +232,6 @@ h2,
 }
 
 .header {
-    text-align: center;
-
     .work-details {
         h1 {
             font-weight: 600 !important;
@@ -226,7 +241,6 @@ h2,
         .profile {
             border-radius: 50%;
             width: 10em;
-            border: .2em solid rgba(5, 15, 30, .9);
             margin: 0 auto 2em;
             filter: grayscale(100%);
         }
@@ -234,7 +248,6 @@ h2,
         margin: 1.5em auto;
         font-size: .9em;
         font-weight: 600;
-        text-transform: uppercase;
         width: 100%;
     }
 
@@ -333,16 +346,15 @@ h2,
     ul {
         @include list-item-highlight(transparent,
         transparent,
-        $color-accent,
-        $bullet-default);
+        $color-accent);
 
         li {
             a>i {
                 margin-right: .5em;
-                background: black;
+                background: $color-accent;
                 padding: 0.4em 1.5em 0.4em 0.5em;
                 color: white;
-                border-radius: 3px;
+                border-radius: 1px;
             }
 
             &:last-child {
@@ -355,9 +367,8 @@ h2,
 .highlights {
     ul {
         @include list-item-highlight(transparent,
-        rgba(0, 0, 0, .1),
-        $color-accent,
-        $bullet-default);
+        $element-bg-color,
+        $color-accent);
 
         li {
             &:first-child {
@@ -376,8 +387,7 @@ h2,
     ul {
         @include list-item-highlight(transparent,
         transparent,
-        $color-accent,
-        $bullet-default);
+        $color-accent);
 
         h4 {
             font-weight: 600 !important;
@@ -401,16 +411,14 @@ h2,
         font-weight: 600 !important;
 
         .site-link {
-            color: $color-accent !important;
             font-size: .8em;
         }
     }
 
     ul {
         @include list-item-highlight(transparent,
-        rgba(0, 0, 0, .1),
-        $color-accent,
-        $bullet-default);
+        $element-bg-color,
+        $color-accent);
 
         li {
             &:first-child {
@@ -432,9 +440,8 @@ h2,
 
     ul {
         @include list-item-highlight(transparent,
-        rgba(0, 0, 0, .1),
-        $color-accent,
-        $bullet-default);
+        $element-bg-color,
+        $color-accent);
 
         li {
             &:first-child {
@@ -457,15 +464,6 @@ h2,
                     color: $color-accent !important;
                 }
             }
-
-            &.role {
-                font-weight: 600 !important;
-            }
-
-            &.dates {
-                font-weight: 900 !important;
-                color: $color-accent;
-            }
         }
 
         img {
@@ -478,7 +476,7 @@ h2,
             font-size: 1.05em;
             font-weight: 300;
             margin: .5em 0;
-            background-color: rgba(0, 0, 0, .1);
+            background-color: $element-bg-color;
             padding: .3em .5em !important;
             border-radius: $border-radius;
         }
@@ -490,9 +488,8 @@ h2,
 
             ul {
                 @include list-item-highlight(transparent,
-                rgba(0, 0, 0, .1),
-                $color-accent,
-                $bullet-default);
+                $element-bg-color,
+                $color-accent);
 
                 li {
                     &:first-child {
@@ -507,27 +504,10 @@ h2,
             }
 
             .environment {
-                background-color: rgba(0, 0, 0, .1);
+                background-color: $element-bg-color;
                 padding: 0.5em;
                 border-radius: $border-radius;
             }
-        }
-    }
-}
-
-.education {
-    i {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        &.grad-degree {
-            font-weight: 600 !important;
-        }
-
-        &.grad-date {
-            font-weight: 900 !important;
-            color: $color-accent;
         }
     }
 }
@@ -541,12 +521,8 @@ h2,
     }
 
     .achievement {
-        i {
-            font-size: 1.5em;
-        }
-
         .summary {
-            background-color: rgba(0, 0, 0, .1);
+            background-color: $element-bg-color;
             padding: .5em;
             border-radius: $border-radius;
 
@@ -563,6 +539,12 @@ h2,
 (max-height: 400px) {
     .page-wrap {
         background: $color-accent !important;
+    }
+
+    .pull-right {
+        float: initial !important;
+        display: block;
+        margin-top: .5em;
     }
 }
 
