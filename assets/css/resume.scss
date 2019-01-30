@@ -98,6 +98,8 @@ div {
 }
 
 section {
+    border-radius: 5px;
+    background: #fffffff0;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     max-width: 60em;
     margin: 1.5em auto;
@@ -149,6 +151,7 @@ hr {
 }
 
 .footer {
+    color: #fff;
     font-size: 1em;
     margin: 1em auto;
     text-align: center;
@@ -182,14 +185,17 @@ h2,
     font-size: 2em;
     font-weight: 300;
     padding: 0em 0.2em;
-    color: #089ee5;
+    color: #fff;
     position: fixed;
     top: 0;
     left: 0;
 }
 
 .page-wrap {
-    padding: 2em 1em;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 2em 1em 0;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
@@ -462,11 +468,11 @@ h2,
         }
 
         .summary {
-            background-color: rgba(0, 0, 0, .1);
-            padding: .3em .5em !important;
             font-size: 1.05em;
             font-weight: 300;
             margin: .5em 0;
+            background-color: rgba(0, 0, 0, .1);
+            padding: .3em .5em !important;
             border-radius: $border-radius;
         }
 
