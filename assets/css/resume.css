@@ -143,7 +143,8 @@ hr {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-filter: none;
-          filter: none; }
+          filter: none;
+  z-index: -1; }
   #bg-img.loading {
     opacity: 0;
     -webkit-filter: blur(5px);
@@ -155,8 +156,7 @@ hr {
   min-height: 100%;
   overflow-x: hidden;
   -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  z-index: -1; }
+  transition: 0.3s ease-in-out; }
   .page-wrap.loading {
     opacity: 0; }
 
