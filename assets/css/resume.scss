@@ -5,6 +5,7 @@ $font-weight-default: 100;
 $color-summary: rgba(0, 0, 0, .6);
 $border-radius: 2px;
 $element-bg-color: transparent;
+$transition-default: .3s ease-in-out;
 $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
@@ -60,7 +61,7 @@ a,
 h1,
 ul,
 li {
-    transition: .3s ease-in-out;
+    transition: $transition-default;
 }
 
 a {
@@ -73,7 +74,7 @@ li {
     list-style-type: none !important;
     margin-left: 0;
     padding-left: 0;
-    transition: .3s;
+    transition: $transition-default;
 }
 
 i,
@@ -95,7 +96,7 @@ section {
     margin: 1.5em auto;
     overflow-x: hidden;
     padding: 1em 1.5em;
-    transition: .3s ease-in-out;
+    transition: $transition-default;
     overflow: visible;
     word-wrap: break-word;
     font-weight: 300;
@@ -208,7 +209,14 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
-    transition: .3s ease-in-out;
+    transition: $transition-default;
+    opacity: 0;
+    filter: blur(5px);
+
+    &.loaded {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 
 .page-wrap {
@@ -216,14 +224,12 @@ hr {
     width: 100vw;
     min-height: 100%;
     overflow-x: hidden;
-    transition: .3s ease-in-out;
+    transition: $transition-default;
     z-index: -1;
     opacity: 0;
-    filter: blur(5px);
 
     &.loaded {
         opacity: 1;
-        filter: blur(0);
     }
 }
 
@@ -276,38 +282,22 @@ hr {
     }
 
     .dl-resume-container {
-        margin-top: 2.5em;
-        margin-bottom: .6em;
-        font-size: 1.2em;
-        transition: .3s ease-in-out;
+        margin: 3em auto 2em;
+        transition: $transition-default;
 
-        .dl-resume-header {
-            text-align: center;
-            text-transform: uppercase;
+        .dl-resume-btn {
+            padding: 10px;
+            background: url('../img/bg-card.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: $border-radius;
+            background-color: $color-accent;
+            color: #fff !important;
             font-weight: 600;
-            font-size: 1em;
-            margin-bottom: .5em;
-        }
+            transition: $transition-default;
 
-        .dl-resume-body {
-            padding: .5em .1em;
-            margin: auto;
-
-            a {
-                i {
-                    padding: .1em 1em;
-                    font-size: 2em;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-
-                &:first-child:after {
-                    content: $divider;
-                    color: $color-accent;
-                    font-size: 1.5em;
-                }
+            &:hover {
+                box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
             }
         }
     }
@@ -326,13 +316,13 @@ hr {
             text-shadow: 0.02em 0.02em 0.03em rgba(0, 0, 0, .5);
             font-size: 5em;
             margin: .3em;
-            transition: .5s ease-in-out;
+            transition: $transition-default;
             filter: grayscale(100%);
 
             &:hover {
                 transform: scale(1.2);
                 filter: grayscale(0);
-                transition: .3s ease-in-out;
+                transition: $transition-default;
             }
         }
     }

@@ -1,7 +1,7 @@
 let Resume = {
   closeLoader: () => {
     setTimeout(()=> {
-      $('#loader, .page-wrap').addClass('loaded');   
+      $('#loader, .page-wrap, #bg-img').addClass('loaded');   
       $('body').toggleClass('disable-scroll'); 
     },1000);    
     setTimeout(()=> {
