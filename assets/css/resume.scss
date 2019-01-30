@@ -1,7 +1,5 @@
 $color-accent: #089ee5;
-$border-size: 3px;
 $divider: ' / ';
-$font-weight-default: 100;
 $color-summary: rgba(0, 0, 0, .6);
 $border-radius: 2px;
 $element-bg-color: transparent;
@@ -33,7 +31,6 @@ sans-serif;
             background-color: $highlight-color !important;
             color: $text-color;
             border-bottom: 1px solid transparent;
-            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
         }
 
         &:hover:before {
@@ -50,7 +47,6 @@ html,
 body {
     font-size: 12px;
     font-family: $font-family;
-    font-weight: $font-weight-default;
 
     &.disable-scroll {
         overflow-y: hidden;
@@ -149,7 +145,6 @@ hr {
     color: #fff;
     font-size: 1em;
     margin: 1em auto;
-    text-align: center;
     font-weight: 600;
 }
 
@@ -159,6 +154,8 @@ hr {
 .work-details>span:nth-child(odd):after {
     content: $divider;
     color: $color-accent;
+    font-weight: 600;
+    opacity: .7;
 }
 
 .experience>span:last-child:after,
@@ -191,7 +188,7 @@ hr {
 }
 
 .accent-color {
-    color: $color-accent;
+    color: $color-accent !important;
 }
 
 .align-center {
@@ -211,12 +208,11 @@ hr {
     top: 0;
     left: 0;
     transition: $transition-default;
-    opacity: 0;
-    filter: blur(5px);
+    filter: none;
 
-    &.loaded {
-        opacity: 1;
-        filter: blur(0);
+    &.loading {
+        opacity: 0;
+        filter: blur(5px);
     }
 }
 
@@ -227,10 +223,9 @@ hr {
     overflow-x: hidden;
     transition: $transition-default;
     z-index: -1;
-    opacity: 0;
 
-    &.loaded {
-        opacity: 1;
+    &.loading {
+        opacity: 0;
     }
 }
 
@@ -341,7 +336,6 @@ hr {
                 background: black;
                 padding: 0.4em 1.5em 0.4em 0.5em;
                 color: white;
-                border-radius: $border-radius;
             }
         }
     }
@@ -363,13 +357,7 @@ hr {
     }
 }
 
-.opensource {
-    h4 {
-        .site-link {
-            font-size: .8em;
-        }
-    }
-
+.opensource {    
     ul {
         @include list-item-highlight(transparent,
         $element-bg-color,
@@ -400,7 +388,6 @@ hr {
             margin: .5em 0;
             background-color: $element-bg-color;
             padding: .3em .5em !important;
-            border-radius: $border-radius;
         }
 
         .details {
@@ -417,7 +404,6 @@ hr {
             .environment {
                 background-color: $element-bg-color;
                 padding: 0.5em;
-                border-radius: $border-radius;
             }
         }
     }
@@ -434,7 +420,6 @@ hr {
         .summary {
             background-color: $element-bg-color;
             padding: .5em;
-            border-radius: $border-radius;
 
             a {
                 font-weight: 200;

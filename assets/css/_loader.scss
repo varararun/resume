@@ -4,12 +4,13 @@
     z-index: 10;
     background: transparent;
     position: fixed;
+    filter: blur(1em);
+    transition: .3s ease-in-out;
+    opacity: 0;
 
-    &.loaded {
-        filter: blur(1em);
-        background: transparent;
-        transition: .3s ease-in-out;
-        opacity: 0;
+    &.loading {
+        opacity: 1;
+        filter: none;
     }
 }
 
