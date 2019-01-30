@@ -530,4 +530,12 @@ h2,
     }
 }
 
+@media handheld,
+(max-width: 640px),
+(max-height: 400px) {
+    .page-wrap {
+        background: $color-accent !important;
+    }
+}
+
 @import 'loader';
