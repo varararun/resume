@@ -264,14 +264,16 @@ hr {
     .info ul li a:hover {
       padding-right: 1.1em; }
   .info ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .info ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
@@ -285,9 +287,6 @@ hr {
   color: white;
   border-radius: 2px; }
 
-.info ul li:last-child {
-  border-bottom: none; }
-
 .highlights ul li {
   padding: 0.3em 0.5em !important;
   background-color: transparent;
@@ -299,14 +298,16 @@ hr {
     .highlights ul li a:hover {
       padding-right: 1.1em; }
   .highlights ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .highlights ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
@@ -324,14 +325,16 @@ hr {
     .skills ul li a:hover {
       padding-right: 1.1em; }
   .skills ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .skills ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
@@ -352,14 +355,16 @@ hr {
     .opensource ul li a:hover {
       padding-right: 1.1em; }
   .opensource ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .opensource ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
@@ -377,14 +382,16 @@ hr {
     .projects ul li a:hover {
       padding-right: 1.1em; }
   .projects ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .projects ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
@@ -418,14 +425,16 @@ hr {
     .experience .job .details ul li a:hover {
       padding-right: 1.1em; }
   .experience .job .details ul li:hover {
-    -webkit-transform: translateX(1em) scale(1.01);
-            transform: translateX(1em) scale(1.01);
+    -webkit-transform: translateX(0.5em) scale(1.01);
+            transform: translateX(0.5em) scale(1.01);
     -webkit-transform-origin: left;
             transform-origin: left;
     opacity: .7;
     background-color: transparent !important;
     color: #089ee5;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .experience .job .details ul li:hover:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
