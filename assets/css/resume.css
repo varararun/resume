@@ -1,8 +1,7 @@
 html,
 body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 100;
-  font-size: 1em; }
+  font-weight: 100; }
   html.disable-scroll,
   body.disable-scroll {
     overflow-y: hidden; }
@@ -43,13 +42,12 @@ section {
   max-width: 60em;
   margin: 1.5em auto;
   overflow-x: hidden;
-  padding: 1em 1em;
+  padding: 1em 1.5em;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   overflow: visible;
   word-wrap: break-word;
-  font-weight: 300;
-  font-size: 1.05em; }
+  font-weight: 300; }
 
 h1 {
   font-size: 36px; }
@@ -171,7 +169,7 @@ h2,
       color: initial;
       position: absolute;
       left: 0;
-      font-size: 1.3em;
+      font-size: 1em;
       top: 0; }
     .header .summary:after {
       content: '\f10e';
@@ -180,7 +178,7 @@ h2,
       color: initial;
       position: absolute;
       right: 0;
-      font-size: 1.3em;
+      font-size: 1em;
       top: 0; }
   .header .dl-resume-container {
     margin-top: 2.5em;
@@ -242,57 +240,59 @@ h2,
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out; }
 
-.info ul {
-  font-size: 1.1em; }
-  .info ul li {
-    padding: 0.3em 0.5em !important;
-    background-color: transparent;
-    border-bottom: 1px solid white;
-    -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0); }
-    .info ul li a {
-      padding-right: 1em; }
-      .info ul li a:hover {
-        padding-right: 1.1em; }
-    .info ul li:before {
-      content: " > ";
-      line-height: 1.8em;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: -.5em;
-      right: 0;
-      bottom: 0;
-      background-color: transparent !important;
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 0 50%;
-              transform-origin: 0 50%;
-      -webkit-transition-property: -webkit-transform;
-      transition-property: -webkit-transform;
-      transition-property: transform;
-      transition-property: transform, -webkit-transform;
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-out;
-              transition-timing-function: ease-out; }
-    .info ul li:hover {
-      -webkit-transform: translateX(1em) scale(1.01);
-              transform: translateX(1em) scale(1.01);
-      -webkit-transform-origin: left;
-              transform-origin: left;
-      opacity: .7;
-      background-color: transparent !important;
-      color: #089ee5; }
-    .info ul li:hover:before {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1); }
-  .info ul li > a > i {
-    margin-right: .5em;
-    background: black;
-    padding: 0.4em 1.5em 0.4em 0.5em;
-    color: white;
-    border-radius: 3px; }
+.info ul li {
+  padding: 0.3em 0.5em !important;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0); }
+  .info ul li a {
+    padding-right: 1em; }
+    .info ul li a:hover {
+      padding-right: 1.1em; }
+  .info ul li:before {
+    content: " > ";
+    line-height: 1.8em;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -.5em;
+    right: 0;
+    bottom: 0;
+    background-color: transparent !important;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out; }
+  .info ul li:hover {
+    -webkit-transform: translateX(1em) scale(1.01);
+            transform: translateX(1em) scale(1.01);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    opacity: .7;
+    background-color: transparent !important;
+    color: #089ee5; }
+  .info ul li:hover:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+.info ul li a > i {
+  margin-right: .5em;
+  background: black;
+  padding: 0.4em 1.5em 0.4em 0.5em;
+  color: white;
+  border-radius: 3px; }
+
+.info ul li:last-child {
+  border-bottom: none; }
 
 .highlights ul li {
   padding: 0.3em 0.5em !important;
@@ -342,6 +342,7 @@ h2,
   border-radius: 5px 5px 0 0; }
 
 .highlights ul li:last-child {
+  border-bottom: none;
   border-radius: 0 0 5px 5px; }
 
 .skills ul li {
@@ -395,6 +396,7 @@ h2,
   border-radius: 5px 5px 0 0; }
 
 .skills ul li:last-child {
+  border-bottom: none;
   border-radius: 0 0 5px 5px; }
 
 .opensource h4 {
@@ -451,6 +453,7 @@ h2,
   border-radius: 5px 5px 0 0; }
 
 .opensource ul li:last-child {
+  border-bottom: none;
   border-radius: 0 0 5px 5px; }
 
 .projects h4 {
@@ -504,6 +507,7 @@ h2,
   border-radius: 5px 5px 0 0; }
 
 .projects ul li:last-child {
+  border-bottom: none;
   border-radius: 0 0 5px 5px; }
 
 .experience .job h4 .details-btn .details-icon {
@@ -580,6 +584,7 @@ h2,
   border-radius: 5px 5px 0 0; }
 
 .experience .job .details ul li:last-child {
+  border-bottom: none;
   border-radius: 0 0 5px 5px; }
 
 .experience .job .details .environment {
@@ -587,14 +592,26 @@ h2,
   padding: 0.5em;
   border-radius: 5px; }
 
+.education i {
+  font-size: 1.5em; }
+
+.education h4.grad-degree {
+  font-weight: 600 !important; }
+
+.education h4.grad-date {
+  font-weight: 900 !important;
+  color: #089ee5; }
+
 .achievements .patent a {
   font-weight: 200;
   color: #089ee5 !important; }
 
+.achievements .achievement i {
+  font-size: 1.5em; }
+
 .achievements .achievement .summary {
   background-color: rgba(0, 0, 0, 0.1);
   padding: .5em;
-  font-size: 1.05em;
   border-radius: 5px; }
   .achievements .achievement .summary a {
     font-weight: 200;

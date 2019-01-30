@@ -60,7 +60,6 @@ html,
 body {
     font-family: $font-family;
     font-weight: $font-weight-default;
-    font-size: 1em;
 
     &.disable-scroll {
         overflow-y: hidden;
@@ -104,12 +103,11 @@ section {
     max-width: 60em;
     margin: 1.5em auto;
     overflow-x: hidden;
-    padding: 1em 1em;
+    padding: 1em 1.5em;
     transition: .3s ease-in-out;
     overflow: visible;
     word-wrap: break-word;
     font-weight: 300;
-    font-size: 1.05em;
 }
 
 h1 {
@@ -252,7 +250,7 @@ h2,
             color: initial;
             position: absolute;
             left: 0;
-            font-size: 1.3em;
+            font-size: 1em;
             top: 0;
         }
 
@@ -263,7 +261,7 @@ h2,
             color: initial;
             position: absolute;
             right: 0;
-            font-size: 1.3em;
+            font-size: 1em;
             top: 0;
         }
     }
@@ -333,18 +331,23 @@ h2,
 
 .info {
     ul {
-        font-size: 1.1em;
         @include list-item-highlight(transparent,
         transparent,
         $color-accent,
         $bullet-default);
 
-        li>a>i {
-            margin-right: .5em;
-            background: black;
-            padding: 0.4em 1.5em 0.4em 0.5em;
-            color: white;
-            border-radius: 3px;
+        li {
+            a>i {
+                margin-right: .5em;
+                background: black;
+                padding: 0.4em 1.5em 0.4em 0.5em;
+                color: white;
+                border-radius: 3px;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }
@@ -362,6 +365,7 @@ h2,
             }
 
             &:last-child {
+                border-bottom: none;
                 border-radius: 0 0 $border-radius $border-radius;
             }
         }
@@ -385,6 +389,7 @@ h2,
             }
 
             &:last-child {
+                border-bottom: none;
                 border-radius: 0 0 $border-radius $border-radius;
             }
         }
@@ -413,6 +418,7 @@ h2,
             }
 
             &:last-child {
+                border-bottom: none;
                 border-radius: 0 0 $border-radius $border-radius;
             }
         }
@@ -436,6 +442,7 @@ h2,
             }
 
             &:last-child {
+                border-bottom: none;
                 border-radius: 0 0 $border-radius $border-radius;
             }
         }
@@ -493,6 +500,7 @@ h2,
                     }
 
                     &:last-child {
+                        border-bottom: none;
                         border-radius: 0 0 $border-radius $border-radius;
                     }
                 }
@@ -507,6 +515,23 @@ h2,
     }
 }
 
+.education {
+    i {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        &.grad-degree {
+            font-weight: 600 !important;
+        }
+
+        &.grad-date {
+            font-weight: 900 !important;
+            color: $color-accent;
+        }
+    }
+}
+
 .achievements {
     .patent {
         a {
@@ -516,10 +541,13 @@ h2,
     }
 
     .achievement {
+        i {
+            font-size: 1.5em;
+        }
+
         .summary {
             background-color: rgba(0, 0, 0, .1);
             padding: .5em;
-            font-size: 1.05em;
             border-radius: $border-radius;
 
             a {
