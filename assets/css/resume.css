@@ -98,8 +98,8 @@ hr {
 .footer {
   color: #fff;
   position: relative;
-  margin: 4em auto 0;
-  padding: 4em 0 3em 0; }
+  margin: 4.5em auto 0;
+  padding: 4em 0 .5em; }
 
 .home-btn {
   position: absolute;
