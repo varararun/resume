@@ -1,6 +1,5 @@
 $color-accent: #089ee5;
 $divider: ' / ';
-$color-summary: rgba(0, 0, 0, .6);
 $border-radius: 2px;
 $element-bg-color: transparent;
 $transition-default: .3s ease-in-out;
@@ -25,16 +24,10 @@ sans-serif;
         }
 
         &:hover {
-            transform: translateX(.5em) scale(1.01);
-            transform-origin: left;
-            opacity: .7;
-            background-color: $highlight-color !important;
-            color: $text-color;
             border-bottom: 1px solid transparent;
-        }
-
-        &:hover:before {
-            transform: scaleX(1);
+            background: #009eecc7;
+            color: white;
+            border-radius: $border-radius;
         }
 
         &:last-child {
@@ -71,7 +64,24 @@ li {
     list-style-type: none !important;
     margin-left: 0;
     padding-left: 0;
-    transition: $transition-default;
+}
+
+ul.bullets-check-o {
+    li:before {
+        content: '\f058';
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+        padding-right: 10px;
+    }
+}
+
+ul.bullets-tack {
+    li:before {
+        content: '\f08d';
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+        padding-right: 10px;
+    }
 }
 
 i,
@@ -89,7 +99,7 @@ section {
     background-size: cover;
     border-radius: $border-radius;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-    max-width: 60em;
+    max-width: 75em;
     margin: 1.5em auto;
     overflow-x: hidden;
     padding: 1em 1.5em;
@@ -158,11 +168,11 @@ hr {
     opacity: .7;
 }
 
-.experience>span:last-child:after,
-.environment>span:last-child:after,
-.projects>span:last-child:after,
-.opensource>span:last-child:after,
-.skills>ul>li>span:last-child:after {
+.experience span:last-child:after,
+.environment span:last-child:after,
+.projects span:last-child:after,
+.opensource span:last-child:after,
+.skills>ul li>span:last-child:after {
     content: '';
 }
 
@@ -199,6 +209,30 @@ hr {
     text-transform: uppercase;
 }
 
+.proficiency {
+    transition: $transition-default;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: -21px;
+}
+
+.skills>ul>li:hover {
+    .proficiency {
+        opacity: 1;
+    }
+
+    span:after {
+        color: white;
+    }
+}
+
+.skills>ul h4:hover {
+    +li .proficiency {
+        opacity: 1;
+    }
+}
+
 #bg-img {
     background: white url('../img/bg.jpg');
     background-size: cover;
@@ -210,7 +244,7 @@ hr {
     transition: $transition-default;
     filter: none;
     z-index: -1;
-    
+
     &.loading {
         opacity: 0;
         filter: blur(5px);
@@ -251,7 +285,6 @@ hr {
 
     .summary {
         position: relative;
-        color: $color-summary !important;
         padding: 0 1.45em;
 
         &:before {
@@ -331,11 +364,14 @@ hr {
         $color-accent);
 
         li {
-            a>i {
-                margin-right: .5em;
-                background: black;
-                padding: 0.4em 1.5em 0.4em 0.5em;
-                color: white;
+            a {
+                transition: 0s;
+
+                i {
+                    margin-right: .5em;
+                    padding: 0.4em 1.5em 0.4em 0.5em;
+                    transition: 0s
+                }
             }
         }
     }
@@ -354,10 +390,14 @@ hr {
         @include list-item-highlight(transparent,
         transparent,
         $color-accent);
+
+        li {
+            position: relative;
+        }
     }
 }
 
-.opensource {    
+.opensource {
     ul {
         @include list-item-highlight(transparent,
         $element-bg-color,
@@ -435,7 +475,7 @@ hr {
         background-size: cover;
     }
 
-    .pull-right {
+    .detail-row>.pull-right {
         float: initial;
         display: block;
         margin-top: .5em;
