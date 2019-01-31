@@ -602,6 +602,9 @@
     <script type="text/javascript">
         $(window).on('load', function() {
             Resume.closeLoader();
+            if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += "no-touch";
+            }
         });
     </script>
 </body>

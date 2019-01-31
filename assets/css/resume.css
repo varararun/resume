@@ -1,3 +1,4 @@
+/* general styling */
 html,
 body {
   font-size: 12px;
@@ -45,9 +46,8 @@ div {
   outline: none !important; }
 
 section {
+  background-color: #fffffff0;
   position: relative;
-  background: #fffffff0 url("../img/bg-card.png") repeat-x center top;
-  background-size: cover;
   border-radius: 2px;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
@@ -60,6 +60,9 @@ section {
   overflow: visible;
   word-wrap: break-word;
   font-weight: 300; }
+  section:first-child {
+    background-image: url("../img/bg-card.png");
+    background-size: cover; }
 
 h1 {
   font-size: 24px; }
@@ -95,6 +98,27 @@ hr {
 ::-webkit-scrollbar {
   display: none; }
 
+/* hover events */
+.no-touch li:hover {
+  border-bottom: 1px solid transparent;
+  background: #009eecc7;
+  color: white;
+  border-radius: 2px; }
+
+.no-touch .skills > ul > li:hover .proficiency {
+  opacity: 1; }
+
+.no-touch .skills > ul > li:hover span:after {
+  color: white; }
+
+.no-touch .skills > ul h4:hover + li .proficiency {
+  opacity: 1; }
+
+.no-touch .dl-resume-btn:hover {
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
+
+/* element styling */
 .footer {
   color: #fff;
   position: relative;
@@ -169,15 +193,6 @@ hr {
   right: 0;
   top: -21px; }
 
-.skills > ul > li:hover .proficiency {
-  opacity: 1; }
-
-.skills > ul > li:hover span:after {
-  color: white; }
-
-.skills > ul h4:hover + li .proficiency {
-  opacity: 1; }
-
 #bg-img {
   background: white url("../img/bg.jpg");
   background-size: cover;
@@ -209,10 +224,8 @@ hr {
     font-weight: 600;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
-    .dl-resume-container .dl-resume-btn:hover {
-      -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
 
+/* content styling */
 .page-wrap {
   padding: 0 1em;
   width: 100vw;
@@ -290,9 +303,7 @@ hr {
       -webkit-transform: scale(1.2);
               transform: scale(1.2);
       -webkit-filter: grayscale(0);
-              filter: grayscale(0);
-      -webkit-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out; }
+              filter: grayscale(0); }
 
 .info ul li {
   padding: 0.3em 0.5em !important;
@@ -302,13 +313,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .info ul li a {
     padding-right: 1em; }
-    .info ul li a:hover {
-      padding-right: 1.1em; }
-  .info ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .info ul li:last-child {
     border-bottom: none; }
 
@@ -329,13 +333,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .highlights ul li a {
     padding-right: 1em; }
-    .highlights ul li a:hover {
-      padding-right: 1.1em; }
-  .highlights ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .highlights ul li:last-child {
     border-bottom: none; }
 
@@ -347,13 +344,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .skills ul li a {
     padding-right: 1em; }
-    .skills ul li a:hover {
-      padding-right: 1.1em; }
-  .skills ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .skills ul li:last-child {
     border-bottom: none; }
 
@@ -368,13 +358,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .opensource ul li a {
     padding-right: 1em; }
-    .opensource ul li a:hover {
-      padding-right: 1.1em; }
-  .opensource ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .opensource ul li:last-child {
     border-bottom: none; }
 
@@ -386,13 +369,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .projects ul li a {
     padding-right: 1em; }
-    .projects ul li a:hover {
-      padding-right: 1.1em; }
-  .projects ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .projects ul li:last-child {
     border-bottom: none; }
 
@@ -419,13 +395,6 @@ hr {
           transform: perspective(1px) translateZ(0); }
   .experience .job .details ul li a {
     padding-right: 1em; }
-    .experience .job .details ul li a:hover {
-      padding-right: 1.1em; }
-  .experience .job .details ul li:hover {
-    border-bottom: 1px solid transparent;
-    background: #009eecc7;
-    color: white;
-    border-radius: 2px; }
   .experience .job .details ul li:last-child {
     border-bottom: none; }
 
@@ -442,6 +411,7 @@ hr {
   .achievements .achievement .summary a {
     font-weight: 200; }
 
+/* mobile styling */
 @media handheld, (max-width: 640px) {
   #bg-img {
     background: white url("../img/bg-blur.png");
@@ -450,8 +420,6 @@ hr {
     float: initial;
     display: block;
     margin-top: .5em; }
-  section {
-    background-size: initial; }
   .proficiency {
     opacity: 1; } }
 

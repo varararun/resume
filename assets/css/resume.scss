@@ -17,17 +17,6 @@ sans-serif;
 
         a {
             padding-right: 1em;
-
-            &:hover {
-                padding-right: 1.1em;
-            }
-        }
-
-        &:hover {
-            border-bottom: 1px solid transparent;
-            background: #009eecc7;
-            color: white;
-            border-radius: $border-radius;
         }
 
         &:last-child {
@@ -35,6 +24,8 @@ sans-serif;
         }
     }
 }
+
+/* general styling */
 
 html,
 body {
@@ -94,9 +85,8 @@ div {
 }
 
 section {
+    background-color: #fffffff0;
     position: relative;
-    background: #fffffff0 url('../img/bg-card.png') repeat-x center top;
-    background-size: cover;
     border-radius: $border-radius;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     max-width: 75em;
@@ -107,6 +97,11 @@ section {
     overflow: visible;
     word-wrap: break-word;
     font-weight: 300;
+
+    &:first-child {
+        background-image: url('../img/bg-card.png');
+        background-size: cover;
+    }
 }
 
 h1 {
@@ -150,6 +145,37 @@ hr {
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* hover events */
+
+.no-touch li:hover {
+    border-bottom: 1px solid transparent;
+    background: #009eecc7;
+    color: white;
+    border-radius: $border-radius;
+}
+
+.no-touch .skills>ul>li:hover {
+    .proficiency {
+        opacity: 1;
+    }
+
+    span:after {
+        color: white;
+    }
+}
+
+.no-touch .skills>ul h4:hover {
+    +li .proficiency {
+        opacity: 1;
+    }
+}
+
+.no-touch .dl-resume-btn:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+}
+
+/* element styling */
 
 .footer {
     color: #fff;
@@ -239,22 +265,6 @@ hr {
     top: -21px;
 }
 
-.skills>ul>li:hover {
-    .proficiency {
-        opacity: 1;
-    }
-
-    span:after {
-        color: white;
-    }
-}
-
-.skills>ul h4:hover {
-    +li .proficiency {
-        opacity: 1;
-    }
-}
-
 #bg-img {
     background: white url('../img/bg.jpg');
     background-size: cover;
@@ -286,12 +296,10 @@ hr {
         color: #fff !important;
         font-weight: 600;
         transition: $transition-default;
-
-        &:hover {
-            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
-        }
     }
 }
+
+/* content styling */
 
 .page-wrap {
     padding: 0 1em;
@@ -372,7 +380,6 @@ hr {
             &:hover {
                 transform: scale(1.2);
                 filter: grayscale(0);
-                transition: $transition-default;
             }
         }
     }
@@ -489,6 +496,8 @@ hr {
     }
 }
 
+/* mobile styling */
+
 @media handheld,
 (max-width: 640px) {
     #bg-img {
@@ -500,10 +509,6 @@ hr {
         float: initial;
         display: block;
         margin-top: .5em;
-    }
-
-    section {
-        background-size: initial;
     }
 
     .proficiency {
