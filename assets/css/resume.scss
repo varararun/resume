@@ -153,9 +153,29 @@ hr {
 
 .footer {
     color: #fff;
-    font-size: 1em;
-    margin: 1em auto;
-    font-weight: 600;
+    position: relative;
+    margin: 4em auto 0;
+    padding: 4em 0 3em 0;
+}
+
+.home-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.scrolltop-btn {
+    cursor: pointer;
+    position: absolute;
+    top: -16px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    i {
+        text-shadow: 0.02em 0.02em 0.03em rgba(0, 0, 0, .5);
+    }
 }
 
 .experience>job>span:after,
@@ -172,7 +192,9 @@ hr {
 .environment span:last-child:after,
 .projects span:last-child:after,
 .opensource span:last-child:after,
-.skills>ul li>span:last-child:after {
+.skills>ul li>span:last-child:after,
+#skills>ul>li>span:last-child:after,
+#skills>ul>li>span:nth-child(7):after {
     content: '';
 }
 
@@ -251,6 +273,26 @@ hr {
     }
 }
 
+.dl-resume-container {
+    margin: 3em auto 2em;
+
+    .dl-resume-btn {
+        padding: 10px;
+        background: url('../img/bg-card.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: $border-radius;
+        background-color: $color-accent;
+        color: #fff !important;
+        font-weight: 600;
+        transition: $transition-default;
+
+        &:hover {
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+        }
+    }
+}
+
 .page-wrap {
     padding: 0 1em;
     width: 100vw;
@@ -307,27 +349,6 @@ hr {
             right: 0;
             font-size: 1em;
             top: 0;
-        }
-    }
-
-    .dl-resume-container {
-        margin: 3em auto 2em;
-        transition: $transition-default;
-
-        .dl-resume-btn {
-            padding: 10px;
-            background: url('../img/bg-card.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: $border-radius;
-            background-color: $color-accent;
-            color: #fff !important;
-            font-weight: 600;
-            transition: $transition-default;
-
-            &:hover {
-                box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
-            }
         }
     }
 }
@@ -479,6 +500,14 @@ hr {
         float: initial;
         display: block;
         margin-top: .5em;
+    }
+
+    section {
+        background-size: initial;
+    }
+
+    .proficiency {
+        opacity: 1;
     }
 }
 

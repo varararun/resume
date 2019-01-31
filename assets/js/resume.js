@@ -1,4 +1,7 @@
 var Resume = {
+    scrollToTop: function () {
+        $("html, body").animate({ scrollTop: 0 }, 3000);
+    },
     closeLoader: function () {
         setTimeout(function () {
             $('#loader, .page-wrap, #bg-img').removeClass('loading');
