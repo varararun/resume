@@ -28,7 +28,7 @@ sans-serif;
 /* general styling */
 
 html,
-body {
+body { 
     font-size: 12px;
     font-family: $font-family;
 
@@ -266,21 +266,16 @@ hr {
 }
 
 #bg-img {
-    background: white url('../img/bg.jpg');
+    background: #121212e0 url('../img/code.png');
     background-size: cover;
+    transform: scale(1.2);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     transition: $transition-default;
-    filter: none;
     z-index: -1;
-
-    &.loading {
-        opacity: 0;
-        filter: blur(5px);
-    }
 }
 
 .dl-resume-container {
@@ -503,11 +498,6 @@ hr {
 
 @media handheld,
 (max-width: 1024px) {
-    #bg-img {
-        background: white url('../img/bg-blur.png');
-        background-size: cover;
-    }
-
     section {
         background-color: #fffffff0;
     }
