@@ -195,10 +195,12 @@ hr {
   top: -21px; }
 
 #bg-img {
-  background: #121212e0 url("../img/code.png");
-  background-size: cover;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  background: #282f35 url("../img/code.png");
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -207,6 +209,16 @@ hr {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   z-index: -1; }
+
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
 
 .dl-resume-container {
   margin: 3em auto 2em; }
