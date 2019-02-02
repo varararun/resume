@@ -108,14 +108,8 @@ hr {
   color: white;
   border-radius: 2px; }
 
-.no-touch .skills > ul > li:hover .proficiency {
-  opacity: 1; }
-
 .no-touch .skills > ul > li:hover span:after {
   color: white; }
-
-.no-touch .skills > ul h4:hover + li .proficiency {
-  opacity: 1; }
 
 .no-touch .dl-resume-btn:hover {
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
@@ -189,13 +183,6 @@ hr {
 
 .uppercase {
   text-transform: uppercase; }
-
-.proficiency {
-  -webkit-transition: 0.6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
-  transition: 0.6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
-  position: absolute;
-  right: 0;
-  top: -21px; }
 
 .bg-img {
   background: #282f35 url("../img/code.png");

@@ -163,18 +163,8 @@ hr {
 }
 
 .no-touch .skills>ul>li:hover {
-    .proficiency {
-        opacity: 1;
-    }
-
     span:after {
         color: white;
-    }
-}
-
-.no-touch .skills>ul h4:hover {
-    +li .proficiency {
-        opacity: 1;
     }
 }
 
@@ -263,13 +253,6 @@ hr {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-.proficiency {
-    transition: $transition-medium;
-    position: absolute;
-    right: 0;
-    top: -21px;
 }
 
 .bg-img {
