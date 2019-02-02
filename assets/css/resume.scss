@@ -1,7 +1,7 @@
 $color-accent: #089ee5;
 $divider: ' / ';
 $border-radius: 2px;
-$bg-color: #282f35;
+$background-color: #282f35;
 $element-bg-color: transparent;
 $transition-default: .3s ease-in-out;
 $font-family: 'Montserrat',
@@ -30,6 +30,7 @@ sans-serif;
 
 html,
 body {
+    background-color: $background-color;
     font-size: 12px;
     font-family: $font-family;
 
@@ -267,7 +268,7 @@ hr {
 }
 
 #bg-img {
-    background: $bg-color url('../img/code.png');
+    background: $background-color url('../img/code.png');
     transform-origin: center;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -278,7 +279,6 @@ hr {
     top: 0;
     left: 0;
     transition: $transition-default;
-    z-index: -1;
 }
 
 .bg-overlay {

@@ -1,6 +1,7 @@
 /* general styling */
 html,
 body {
+  background-color: #282f35;
   font-size: 12px;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; }
   html.disable-scroll,
@@ -207,8 +208,7 @@ hr {
   top: 0;
   left: 0;
   -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  z-index: -1; }
+  transition: 0.3s ease-in-out; }
 
 .bg-overlay {
   position: fixed;
