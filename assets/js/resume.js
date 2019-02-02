@@ -1,6 +1,25 @@
 var Resume = {
+    initialize: function () {
+        Resume.loadEvents();
+    },
+    loadEvents: function () {
+        $('#loader').addClass('loading');
+        Resume.loadLinkEvents();
+    },
+    loading: function () {
+        $('.bg-img, .bg-overlay, .page-wrap').addClass('loading');
+    },
     scrollToTop: function () {
         $("html, body").animate({ scrollTop: 0 }, 3000);
+    },
+    loadLinkEvents: function () {
+        $('a').click(function (e) {
+            Resume.loading();
+            e.preventDefault();
+            setTimeout(function () {
+                window.open(e.currentTarget.href, '_self');
+            }, 1000);
+        });
     },
     closeLoader: function () {
         setTimeout(function () {

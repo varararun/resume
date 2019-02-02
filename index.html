@@ -22,7 +22,7 @@
 </head>
 
 <body class="disable-scroll">
-    <div id="loader" class="loader-container loading">
+    <div id="loader" class="loader-container">
         <div class="cube-loader">
             <div class="cube-face cube-face-front"><i class="devicon-java-plain"></i></div>
             <div class="cube-face cube-face-back"><i class="devicon-docker-plain"></i></div>
@@ -32,8 +32,8 @@
             <div class="cube-face cube-face-top"><i class="devicon-slack-plain"></i></div>
         </div>
     </div>
-    <div id="bg-img"></div>
-    <div class="bg-overlay"></div>
+    <div class="bg-img loading"></div>
+    <div class="bg-overlay loading"></div>
     <div class="page-wrap loading">
         <section class="header align-center wow fadeIn" id="header">
             <span class="home-btn" data-toggle="tooltip" title="avarghese.me" data-placement="right">
@@ -584,6 +584,7 @@
     <script>
         new WOW().init();
         $("[data-toggle='tooltip']").tooltip();
+        Resume.initialize();
     </script>
     <script>
         (function(i, s, o, g, r, a, m) {

@@ -1,16 +1,17 @@
 .loader-container {
+    cursor: wait;
     width: 100%;
     height: 100%;
     z-index: 10;
-    background: transparent;
     position: fixed;
     filter: blur(1em);
-    transition: .3s ease-in-out;
+    transition: $transition-short;
     opacity: 0;
 
     &.loading {
+        transition: $transition-long;
+        filter: blur(0);
         opacity: 1;
-        filter: none;
     }
 }
 

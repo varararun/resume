@@ -3,7 +3,9 @@ $divider: ' / ';
 $border-radius: 2px;
 $background-color: #282f35;
 $element-bg-color: transparent;
-$transition-default: .3s ease-in-out;
+$transition-short: 0.2s cubic-bezier(0.83, -0.03, 0.54, 0.99);
+$transition-medium: .6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
+$transition-long: 1s cubic-bezier(0.83, -0.03, 0.54, 0.99);
 $font-family: 'Montserrat',
 'Helvetica Neue',
 Arial,
@@ -30,7 +32,6 @@ sans-serif;
 
 html,
 body {
-    background-color: $background-color;
     font-size: 12px;
     font-family: $font-family;
 
@@ -44,7 +45,7 @@ a,
 h1,
 ul,
 li {
-    transition: $transition-default;
+    transition: $transition-medium;
 }
 
 a {
@@ -95,7 +96,7 @@ section {
     margin: 1.5em auto;
     overflow-x: hidden;
     padding: 1em 1.5em;
-    transition: $transition-default;
+    transition: $transition-medium;
     overflow: visible;
     word-wrap: break-word;
     font-weight: 300;
@@ -146,6 +147,10 @@ hr {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.loading {
+    opacity: 0;
 }
 
 /* hover events */
@@ -261,24 +266,24 @@ hr {
 }
 
 .proficiency {
-    transition: $transition-default;
+    transition: $transition-medium;
     position: absolute;
     right: 0;
     top: -21px;
 }
 
-#bg-img {
+.bg-img {
     background: $background-color url('../img/code.png');
     transform-origin: center;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    transition: $transition-default;
+    transition: $transition-medium;
 }
 
 .bg-overlay {
@@ -288,7 +293,7 @@ hr {
     width: 100%;
     height: 100%;
     background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
-    transition: $transition-default;
+    transition: $transition-medium;
 }
 
 .dl-resume-container {
@@ -303,7 +308,7 @@ hr {
         background-color: $color-accent;
         color: #fff !important;
         font-weight: 600;
-        transition: $transition-default;
+        transition: $transition-medium;
     }
 }
 
@@ -318,11 +323,7 @@ hr {
     width: 100vw;
     min-height: 100%;
     overflow-x: hidden;
-    transition: $transition-default;
-
-    &.loading {
-        opacity: 0;
-    }
+    transition: $transition-medium;
 }
 
 .header {
@@ -385,7 +386,7 @@ hr {
         i {
             font-size: 5em;
             margin: .3em;
-            transition: $transition-default;
+            transition: $transition-medium;
             filter: grayscale(100%);
 
             &:hover {
