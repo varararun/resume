@@ -10,10 +10,10 @@ var Resume = {
         $('.bg-img, .bg-overlay, .page-wrap').addClass('loading');
     },
     scrollToTop: function () {
-        $("html, body").animate({ scrollTop: 0 }, 3000);
+        $('html, body').animate({ scrollTop: 0 }, 3000);
     },
     loadLinkEvents: function () {
-        $('a').click(function (e) {
+        $("a[animate-link='true']").click(function (e) {
             Resume.loading();
             e.preventDefault();
             setTimeout(function () {
