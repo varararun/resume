@@ -226,6 +226,11 @@ hr {
 .no-touch .proficiency {
   opacity: 0; }
 
+.logo {
+  width: 8em;
+  height: auto;
+  padding: .5em 0; }
+
 /* content styling */
 .page-wrap {
   padding: 0 1em;
@@ -369,11 +374,6 @@ hr {
     padding-right: 1em; }
   .projects ul li:last-child {
     border-bottom: none; }
-
-.experience .job img {
-  width: 8em;
-  height: auto;
-  padding: .5em 0; }
 
 .experience .job .summary {
   font-size: 1.05em;

@@ -299,6 +299,12 @@ hr {
     opacity: 0;
 }
 
+.logo {        
+    width: 8em;
+    height: auto;
+    padding: .5em 0;
+}
+
 /* content styling */
 
 .page-wrap {
@@ -438,13 +444,6 @@ hr {
 
 .experience {
     .job {
-
-        img {
-            width: 8em;
-            height: auto;
-            padding: .5em 0;
-        }
-
         .summary {
             font-size: 1.05em;
             font-weight: 300;
