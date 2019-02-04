@@ -52,7 +52,7 @@ section {
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   max-width: 75em;
-  margin: 1.5em auto;
+  margin: 2em auto;
   overflow-x: hidden;
   padding: 1em 1.5em;
   -webkit-transition: 0.6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
@@ -114,6 +114,10 @@ hr {
 .no-touch .dl-resume-btn:hover {
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.no-touch section:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01); }
 
 /* element styling */
 .footer {
