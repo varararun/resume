@@ -303,7 +303,7 @@ hr {
     opacity: 0;
 }
 
-.logo {        
+.logo {
     width: 8em;
     height: auto;
     padding: .5em 0;
@@ -465,6 +465,15 @@ hr {
                 @include list-item-highlight(transparent,
                 $element-bg-color,
                 $color-accent);
+
+                li:before {
+                    content: '\f005';
+                    font-family: 'Font Awesome\ 5 Free';
+                    font-weight: 900;
+                    padding-right: 10px;
+                    font-size: 10px;
+                    vertical-align: text-bottom;
+                }
             }
 
             .environment {
