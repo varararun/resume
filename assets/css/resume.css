@@ -61,7 +61,7 @@ section {
   word-wrap: break-word;
   font-weight: 300; }
   section:first-child {
-    background-image: url("../img/bg-card.png");
+    background-image: url("../img/backgrounds/bg-card.png");
     background-size: cover; }
 
 h1 {
@@ -189,7 +189,7 @@ hr {
   text-transform: uppercase; }
 
 .bg-img {
-  background: #282f35 url("../img/code.png");
+  background: #282f35 url("../img/backgrounds/code.png");
   -webkit-transform-origin: center;
           transform-origin: center;
   background-size: cover;
@@ -217,7 +217,7 @@ hr {
   margin: 3em auto 2em; }
   .dl-resume-container .dl-resume-btn {
     padding: 10px;
-    background: url("../img/bg-card.png");
+    background: url("../img/backgrounds/bg-card.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2px;

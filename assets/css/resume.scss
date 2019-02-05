@@ -102,7 +102,7 @@ section {
     font-weight: 300;
 
     &:first-child {
-        background-image: url('../img/bg-card.png');
+        background-image: url('../img/backgrounds/bg-card.png');
         background-size: cover;
     }
 }
@@ -260,7 +260,7 @@ hr {
 }
 
 .bg-img {
-    background: $background-color url('../img/code.png');
+    background: $background-color url('../img/backgrounds/code.png');
     transform-origin: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -288,7 +288,7 @@ hr {
 
     .dl-resume-btn {
         padding: 10px;
-        background: url('../img/bg-card.png');
+        background: url('../img/backgrounds/bg-card.png');
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: $border-radius;
