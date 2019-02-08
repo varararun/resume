@@ -244,10 +244,14 @@ hr {
   -webkit-transition: 0.6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
   transition: 0.6s cubic-bezier(0.2, 0.74, 0.54, 0.99);
   -webkit-transform: initial;
-          transform: initial; }
+          transform: initial;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s; }
   .page-wrap.loading {
     -webkit-transform: translateY(50px);
-            transform: translateY(50px); }
+            transform: translateY(50px);
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
 
 .header .work-details {
   margin: 1.5em auto;

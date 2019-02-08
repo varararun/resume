@@ -316,11 +316,13 @@ hr {
     width: 100vw;
     min-height: 100%;
     overflow-x: hidden;
-    transition: $transition-medium;
+    transition: $transition-medium;    
     transform: initial;
+    transition-delay: .5s;
 
-    &.loading {
+    &.loading {        
         transform: translateY(50px);
+        transition-delay: 0s;
     }
 }
 
