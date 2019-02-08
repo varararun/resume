@@ -29,5 +29,5 @@ var Resume = {
         setTimeout(function () {
             $('#loader').remove();
         }, 1500);
-    }
+    },
 };

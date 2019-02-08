@@ -22,12 +22,12 @@ let Resume = {
     });
   },
   closeLoader: () => {
-    setTimeout(()=> {
-      $('.loading').removeClass('loading');   
+    setTimeout(()=> {       
+      $('.loading').removeClass('loading');              
       $('body').toggleClass('disable-scroll'); 
     },1000);    
     setTimeout(()=> {
-      $('#loader').remove();    
-    },1500);     
-  }
+      $('#loader').remove();           
+    },1500);    
+  },
 };

@@ -317,6 +317,11 @@ hr {
     min-height: 100%;
     overflow-x: hidden;
     transition: $transition-medium;
+    transform: initial;
+
+    &.loading {
+        transform: translateY(50px);
+    }
 }
 
 .header {
