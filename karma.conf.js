@@ -15,9 +15,6 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            "assets/lib/jquery/dist/jquery.min.js",
-            "assets/lib/wow/dist/wow.min.js",
-            "assets/lib/bootstrap/dist/js/bootstrap.min.js",
             "assets/js/resume.js",
             "assets/js/resume.spec.js"
         ],
