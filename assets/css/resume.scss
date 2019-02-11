@@ -60,24 +60,6 @@ li {
     padding-left: 0;
 }
 
-ul.bullets-check-o {
-    li:before {
-        content: '\f058';
-        font-family: 'Font Awesome\ 5 Free';
-        font-weight: 900;
-        padding-right: 10px;
-    }
-}
-
-ul.bullets-tack {
-    li:before {
-        content: '\f08d';
-        font-family: 'Font Awesome\ 5 Free';
-        font-weight: 900;
-        padding-right: 10px;
-    }
-}
-
 i,
 a,
 button,
@@ -189,14 +171,16 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 5px 10px;
+    font-size: 25px;
     color: $color-accent;
 }
 
 .scrolltop-btn {
     cursor: pointer;
     position: absolute;
-    top: -16px;
+    top: -20px;
+    font-size: 36px;
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -236,7 +220,7 @@ hr {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1.4em 1em 0 0;
+    padding: 1em 1em 0 0;
 
     i {
         font-size: 1.5em;
@@ -316,11 +300,11 @@ hr {
     width: 100vw;
     min-height: 100%;
     overflow-x: hidden;
-    transition: $transition-medium;    
+    transition: $transition-medium;
     transform: initial;
     transition-delay: .5s;
 
-    &.loading {        
+    &.loading {
         transform: translateY(50px);
         transition-delay: 0s;
     }
@@ -349,28 +333,6 @@ hr {
     .summary {
         position: relative;
         padding: 0 1.45em;
-
-        &:before {
-            content: '\f10d';
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
-            color: initial;
-            position: absolute;
-            left: 0;
-            font-size: 1em;
-            top: 0;
-        }
-
-        &:after {
-            content: '\f10e';
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
-            color: initial;
-            position: absolute;
-            right: 0;
-            font-size: 1em;
-            top: 0;
-        }
     }
 }
 
@@ -408,8 +370,7 @@ hr {
                 transition: 0s;
 
                 i {
-                    margin-right: .5em;
-                    padding: 0.4em 1.5em 0.4em 0.5em;
+                    margin-right: 1em;
                     transition: 0s
                 }
             }
@@ -422,6 +383,13 @@ hr {
         @include list-item-highlight(transparent,
         $element-bg-color,
         $color-accent);
+
+        li {
+            i {
+                margin-right: 1em;
+                transition: 0s
+            }
+        }
     }
 }
 
@@ -438,6 +406,10 @@ hr {
 }
 
 .opensource {
+    h4>a>i {
+        font-size: 15px;
+    }
+
     ul {
         @include list-item-highlight(transparent,
         $element-bg-color,
@@ -473,13 +445,11 @@ hr {
                 $element-bg-color,
                 $color-accent);
 
-                li:before {
-                    content: '\f005';
-                    font-family: 'Font Awesome\ 5 Free';
-                    font-weight: 900;
-                    padding-right: 10px;
-                    font-size: 10px;
-                    vertical-align: text-bottom;
+                li {
+                    i {
+                        margin-right: 1em;
+                        transition: 0s
+                    }
                 }
             }
 
@@ -506,6 +476,15 @@ hr {
             a {
                 font-weight: 200;
             }
+        }
+    }
+}
+
+.work-auth {
+    h4 {
+        i {
+            font-size: 15px;
+            margin-right: 1em;
         }
     }
 }
