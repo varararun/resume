@@ -155,9 +155,6 @@ hr {
   text-transform: uppercase;
   color: #089ee5 !important; }
 
-.pull-right {
-  float: right; }
-
 .section-icon {
   position: absolute;
   top: 0;
@@ -224,6 +221,18 @@ hr {
   width: 8em;
   height: auto;
   padding: .5em 0; }
+
+.detail-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
 
 /* content styling */
 .page-wrap {
@@ -416,10 +425,8 @@ hr {
     background-color: #fffffff0; } }
 
 @media handheld, (max-width: 450px) {
-  .detail-row > .pull-right {
-    float: initial;
-    display: block;
-    margin-top: .5em; } }
+  .detail-row > strong {
+    margin-bottom: 5px; } }
 
 .loader-container {
   cursor: wait;

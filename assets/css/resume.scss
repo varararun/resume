@@ -212,10 +212,6 @@ hr {
     color: $color-accent !important;
 }
 
-.pull-right {
-    float: right;
-}
-
 .section-icon {
     position: absolute;
     top: 0;
@@ -291,6 +287,12 @@ hr {
     width: 8em;
     height: auto;
     padding: .5em 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 /* content styling */
@@ -500,10 +502,8 @@ hr {
 
 @media handheld,
 (max-width: 450px) {
-    .detail-row>.pull-right {
-        float: initial;
-        display: block;
-        margin-top: .5em;
+    .detail-row>strong {
+        margin-bottom: 5px;
     }
 }
 
