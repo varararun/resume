@@ -321,18 +321,18 @@ hr {
     -webkit-transition: 0s;
     transition: 0s; }
 
-.highlights ul li {
+.qualifications ul li {
   padding: 0.3em 0.5em !important;
   background-color: transparent;
   border-bottom: 1px solid white;
   -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0); }
-  .highlights ul li a {
+  .qualifications ul li a {
     padding-right: 1em; }
-  .highlights ul li:last-child {
+  .qualifications ul li:last-child {
     border-bottom: none; }
 
-.highlights ul li i {
+.qualifications ul li i {
   margin-right: 1em;
   -webkit-transition: 0s;
   transition: 0s; }
