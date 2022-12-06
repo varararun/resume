@@ -37,7 +37,7 @@
         "browser-sync": "^2.26.3",
         "clean-css": "^3.4.21",
         "del": "^2.2.2",
-        "express": "^4.14.0",
+        "express": "^4.17.3",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean-css": "^4.0.0",
