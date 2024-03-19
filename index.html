@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta content="Arun's Resume" property="og:title">
     <meta content="https://avarghese.me/resume" property="og:url">
     <meta content="assets/img/previews/site-preview.png" property="og:image">
@@ -19,6 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css">
     <link href="assets/css/resume.min.css" rel="stylesheet" type="text/css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="canonical" href="https://avarghese.me/resume">
+
 </head>
 
 <body class="disable-scroll">
@@ -53,7 +57,7 @@
                 company's success. In my free time, I work on front-end web development with popular frameworks to learn more about UI/UX and software architecture
             </div>
             <div class="dl-resume-container">
-                <a href="assets/files/arunvarghese_resume.pdf" animate-link="true" class="dl-resume-btn uppercase text-shadow">
+                <a href="assets/files/arunvarghese_resume.pdf" target="_blank" animate-link="true" class="dl-resume-btn uppercase text-shadow">
                     Download Resume &nbsp; <i class="icon ion-ios-cloud-download"></i>
                 </a>
             </div>
@@ -263,6 +267,43 @@
             <span class="section-icon text-shadow"><i class="icon ion-ios-flag"></i></span>
             <hr>
             <div class="current job">
+                <a href="https://www.comcast.com/" animate-link="true">
+                    <img src="assets/img/logos/logo-comcast.png" class="logo" data-toggle="tooltip" title="Comcast in Plano, TX" data-placement="right"></img>
+                </a>
+                <h3 class="role">Senior Software Engineer</h3>
+                <h4 class="detail-row">
+                    <span class="location">
+                        Plano, TX
+                    </span>
+                    <span class="accent-color">
+                        January 2022 - Present
+                    </span>
+                </h4>
+                <div class="summary">
+                    Digitizing physical forms and adding business validations, api integrations, additional logic to make customer onboarding self-service and a smoother experience. In addition, as one of the UI leads I identify areas for improvement in our internal and customer facing applications and work on creating enhancements and reusable components that streamline the development process
+                </div>
+                <h4>
+                    <a data-target=".experience&gt;.current&gt;.details" data-toggle="collapse">
+                        Highlights
+                        <i class="accent-color icon ion-ios-arrow-down"></i>
+                    </a>
+                </h4>
+                <div class="details collapse">
+                    <ul>
+                        <li><i class="icon ion-ios-checkmark-circle"></i>Migrated manual processes and form submissions to self-service digitized forms to increase customer onboarding throughput by 10x</li>
+                        <li><i class="icon ion-ios-checkmark-circle"></i>Designed and developed reusable angular material components to streamline development of new features and provide consistency for the look and feel of internal and external web applications</li>
+                        <li><i class="icon ion-ios-checkmark-circle"></i>Proficiently troubleshooted complex issues across multilayered architecture and documented solutions to reduce repetitive investigations and improve triage times for support teams by 20%</li>
+                        <li><i class="icon ion-ios-checkmark-circle"></i>Identified and revamped workflow tool search/filtering by implementing enhancements like server-side pagination to improve page load performance from 10+sec to <2sec</li> <li><i class="icon ion-ios-checkmark-circle"></i>Partnered with DevOps team to get Spring Boot instance of legacy webservice into Production in a timely manner to improve stability, streamline deployments, and debugging</li>
+                        <li><i class="icon ion-ios-checkmark-circle"></i>Increased test coverage up to 80% across internal web application and spring boot webservices</li>
+                    </ul>
+                    <h4>Environment</h4>
+                    <div class="environment">
+                        <span>Mac OS</span><span>Linux</span><span>ZSH</span><span>Elastic Search</span><span>HTML</span><span>SCSS</span><span>MySQL</span><span>MyBatis</span><span>IntelliJ</span><span>Micro Services</span><span>Agile</span><span>Scrum</span><span>Karma</span><span>Spring MVC</span><span>REST</span><span>Github</span><span>GIT</span><span>Kubernetes</span><span>Nexus</span><span>Maven</span><span>Docker</span><span>JUnit</span><span>Postman</span><span>Slack</span><span>JIRA</span><span>Confluence Wiki</span><span>Angular</span><span>TypeScript</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="third job">
                 <a href="https://www.masergy.com/" animate-link="true">
                     <img src="assets/img/logos/logo-masergy.png" class="logo" data-toggle="tooltip" title="Masergy, Inc. in Plano, TX" data-placement="right"></img>
                 </a>
@@ -272,11 +313,11 @@
                         Plano, TX
                     </span>
                     <span class="accent-color">
-                        June 2018 - Present
+                        June 2018 - December 2021
                     </span>
                 </h4>
                 <div class="summary">
-                    Full Stack, currently leading migration of legacy applications to Angular framework with an emphasis on Material design to improve client side experiences, unify look and feel across products, and transition to a modern tech stack using event driven messaging. In addition I mentor junior developers through onboarding, lunch and learns, and code reviews
+                    Full Stack, led migration of legacy applications to Angular framework with an emphasis on Material design to improve client side experiences, unify look and feel across products, and transition to a modern tech stack using event driven messaging. In addition I mentor junior developers through onboarding, lunch and learns, and code reviews
                 </div>
                 <h4>
                     <a data-target=".experience&gt;.current&gt;.details" data-toggle="collapse">
@@ -408,7 +449,7 @@
             </div>
     </div>
     <div class="dl-resume-container align-center">
-        <a href="assets/files/arunvarghese_resume.pdf" animate-link="true" class="dl-resume-btn uppercase text-shadow">
+        <a href="assets/files/arunvarghese_resume.pdf" target="_blank" animate-link="true" class="dl-resume-btn uppercase text-shadow">
             Download Resume &nbsp; <i class="icon ion-ios-cloud-download"></i>
         </a>
     </div>
@@ -577,6 +618,18 @@
             Resume.closeLoader();
             if (!("ontouchstart" in document.documentElement)) {
                 document.documentElement.className += "no-touch";
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('load', async () => {
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.register('sw.js');
+                    console.log('[ServiceWorker] registration successful with scope: ', registration.scope);
+                } catch (err) {
+                    console.error(err);
+                }
             }
         });
     </script>
