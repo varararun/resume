@@ -6,9 +6,9 @@
     "theme_color": "#000000",
     "background_color": "#000000",
     "icons": [{
-        "src": "assets/img/icons/icon.png",
+        "src": "assets/img/icons/icon_x512.png",
         "type": "image/png",
-        "sizes": "384x384",
+        "sizes": "512x512",
         "purpose": "any"
     }]
 }
